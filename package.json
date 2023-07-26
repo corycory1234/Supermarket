@@ -1,0 +1,32 @@
+{
+  "name": "supermarket",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vee-validate/i18n": "^4.9.6",
+    "@vee-validate/rules": "^4.9.6",
+    "axios": "^1.4.0",
+    "bootstrap": "^5.3.0",
+    "bootstrap-icons": "^1.10.5",
+    "js-cookie": "^3.0.5",
+    "mitt": "^3.0.0",
+    "pinia": "^2.1.4",
+    "swiper": "^10.0.3",
+    "vee-validate": "^4.9.6",
+    "vue": "^3.2.47",
+    "vue-axios": "^3.5.2",
+    "vue-router": "^4.2.2",
+    "vue3-loading-overlay": "^0.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "sass": "^1.63.6",
+    "vite": "^4.3.9"
+  }
+}

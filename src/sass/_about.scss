@@ -1,0 +1,83 @@
+/*** HEADER ***/
+.page-header {
+  background: url(../assets/images/ABOUT/About-Header2.jpg) center center no-repeat;
+  background-size: cover;
+  margin-top: 66px;
+  li:hover a{
+    color:cadetblue;
+  }
+};
+
+.page-header .breadcrumb-item+.breadcrumb-item::before {
+  color: white;
+};
+
+.page-header .breadcrumb-item,
+.page-header .breadcrumb-item a {
+    font-size: 18px;
+    color: white;
+};
+
+
+/*** OUR TEAM ***/
+.section-title {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+}
+
+.section-title::before {
+  position: absolute;
+  content: "";
+  width: calc(100% + 80px);
+  height: 2px;
+  top: 20px;
+  left: -40px;
+  background: blue;
+  z-index: -1;
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  width: calc(100% + 120px);
+  height: 2px;
+  bottom: 24px;
+  left: -60px;
+  background: blue;
+  z-index: -1;
+}
+
+.section-title.text-start::before {
+  width: calc(100% + 40px);
+  left: 0;
+}
+
+.section-title.text-start::after {
+  width: calc(100% + 60px);
+  left: 0;
+}
+
+/*** Team  ***/
+.btn-square{
+  padding: 0;
+  font-size: 1.2rem;
+  color: burlywood;
+  border-color: transparent;
+};
+.btn-square:hover{
+  background-color: yellow;
+  color: black;
+};
+.team-txt{
+  text-align: center;
+}
+
+.team-item {
+  position: relative;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+}

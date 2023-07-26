@@ -1,0 +1,355 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700,800);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+// HEADER 
+.page-header {
+  background: url(../assets/images/NEWS/NEWS-Header.jpg) center center no-repeat;
+  background-size: cover;
+  margin-top: 66px;
+    li:hover a{
+    color:cadetblue;
+  }
+};
+.page-header .breadcrumb-item+.breadcrumb-item::before {
+  color: white;
+};
+.page-header .breadcrumb-item,
+.page-header .breadcrumb-item a {
+    font-size: 18px;
+    color: white;
+};
+
+
+// 新聞大容器
+.news-container{
+  // margin: auto;
+  // display: flex;
+  // justify-content:space-between;
+  max-width: 98%;
+  // flex-wrap: wrap;
+  
+  // 新聞卡片左邊容器
+  .card-container {
+    // outline: auto;
+    max-width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+
+
+  // 單張卡片設定
+  .news-card {
+    font-family: 'Raleway', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    // min-width: 220px;
+    width: calc(100%/2);
+    // max-width: 25%;
+    height: auto;
+    // width: 100%; //暫時保留, 不然Bug那張卡片會變小
+
+    // .news-card:not(:nth-child(4n)){
+    //   margin-right: calc(4% /3);
+    // }
+
+    // 圖片容器
+    .img-container{
+      // outline: 3px solid forestgreen;
+      // max-width: 100%;
+      // height: 30%;
+      overflow: hidden;
+      aspect-ratio: 16/9;
+
+      // 單張圖片設定
+      .img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        vertical-align: middle;
+
+        transform-origin: 50% 100%;
+
+        transition: all 0.4s ease;
+      };
+    };
+
+    // 文字容器
+    .txt-container {
+      // outline: auto;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 25px;
+      // position: relative;
+      h4{
+       font-size: 1rem;
+      }
+
+      // 作者、瀏覽、留言次數
+      .info-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        .info-img-container {
+          display: flex;
+          max-width: 9%;
+          img {
+            border-radius: 50%;
+          };
+          div {
+            padding-left: 20px
+          }
+        };
+        // .info-txt-container {
+        //   display: flex;
+        //   div {
+        //     padding-left: 1px;
+        //   };
+        //   i {
+        //     padding-right: 2px;
+        //   }
+        // }
+      };
+    };
+  };
+    // 分頁位置
+    .pagination-bottom {
+      margin: auto
+    }
+  };
+
+  // 右側廣告區
+  .ad-container {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    // outline: auto;
+    // justify-content: flex-start;
+    
+    //廣告頂部
+    .ad-top {
+      width: 100%;
+      height: 40%;
+      a {
+        display: block;
+        margin-bottom: 1rem;
+        color: white;
+      }
+      .ad-link {
+        border-radius: 5px;
+      }
+    }
+    // 廣告底部
+    .ad-bottom {
+      height: 30%;
+      // text-align: center;
+      img {
+        display: block;
+      }
+      .img-fluid {
+        margin: auto;
+        max-width: 74%;
+      }
+    }
+  }
+  
+}
+
+@media (max-width: 992px) {
+  .news-container {
+    // TOP廣告
+    .row {
+      display: flex;
+      flex-direction: column;
+      .card-container {
+        max-width: 98%;
+      }
+    }
+    // 下方廣告
+    .ad-container {
+      width: 98%;
+      margin-top: 20px;
+      flex-direction: row;
+      justify-content:space-around;
+      .ad-top {
+        padding-right: 30px;
+        span {
+          font-size: .8rem
+        }
+      }
+    }
+    
+  };
+}
+
+
+@media (max-width: 768px) {
+  .news-container {
+    .card-container {
+      .news-card {
+        .txt-container {
+          .info-container {
+            .info-img-container {
+              max-width: 13%;
+            }
+          }
+        } 
+      }.ad-container {
+        max-width: 98%;
+        .ad-top {
+          span {
+            font-size: .7rem;
+          }
+        }
+      }
+    }
+    
+  }
+}
+
+@media (max-width: 680px) {
+  .news-container {
+    .row {
+      .news-card {
+        width: 98%;
+        .date {
+          width: 25%;
+        }
+        button {
+          width: 50%;
+        }
+      }
+    }
+
+    .ad-container {
+      flex-direction: column;
+      .ad-top {
+        margin-bottom: 10px;
+        span {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:480px) {
+  .news-container {
+    .row {
+      .news-card{
+        .date {
+          width: 40%;
+        }
+      }
+    }
+  }
+
+
+
+}
+
+@media (max-width: 414px) {
+  .news-container {
+    .row {
+      .news-card {
+        button {
+          width: 75%;
+        }
+      }
+
+    }
+  }
+
+}
+
+
+// 單張卡片動畫
+.news-card * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.news-card .date {
+  background-color: rgba(26,188,156, .5);
+  top: 20px;
+  color: #fff;
+  left: 15px;
+  // min-height: 50px;
+  // min-width: 130px;
+  position: absolute;
+  text-align: center;
+  line-height: 1.5rem;
+  border-radius: 10px;
+  width: 35%;
+  transition-delay: 0.2s;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+// .news-card i {
+//   line-height: 60px;
+//   font-size: 30px;
+//   -webkit-transform: rotateY(-90deg);
+//   transform: rotateY(-90deg);
+//   -webkit-transition-delay: 0s;
+//   transition-delay: 0s;
+// }
+// .news-card h3,
+// .news-card p {
+//   margin: 0;
+//   padding: 0;
+// }
+// .news-card h3 {
+//   margin-bottom: 10px;
+//   display: inline-block;
+//   font-weight: 600;
+//   color: #333333;
+//   text-transform: uppercase;
+// }
+.news-card p {
+  font-size: 0.8em;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+.news-card button {
+  border: none;
+  padding: 10px 10px;
+  background-color: #1abc9c;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-size: 0.8em;
+  width: 60%;
+  border-radius: 5px;
+  align-self: flex-end;
+}
+.news-card a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.news-card:hover .date,
+.news-card.hover .date {
+  -webkit-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+// .news-card:hover i,
+// .news-card.hover i {
+//   -webkit-transform: rotateY(0);
+//   transform: rotateY(0);
+//   -webkit-transition-delay: 0.2s;
+//   transition-delay: 0.2s;
+// }
+.news-card:hover button,
+.news-card.hover button {
+  background-color: #117964;
+}

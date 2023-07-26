@@ -1,0 +1,15 @@
+.login{
+  height: 100vh;
+  // margin-top: 3rem;
+  background-color: #9A616D;
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+      border-radius: 1rem;
+    }
+  }
+}

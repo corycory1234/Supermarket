@@ -1,0 +1,234 @@
+/*** HEADER ***/
+.page-header {
+  background: url(../assets/images/Checkout/Checkout-Headr2.jpg) center center no-repeat;
+  background-size: cover;
+  margin-top: 66px;
+  li:hover a{
+    color:cadetblue;
+  }
+};
+
+.page-header .breadcrumb-item+.breadcrumb-item::before {
+  color: white;
+};
+
+.page-header .breadcrumb-item,
+.page-header .breadcrumb-item a {
+    font-size: 18px;
+    color: white;
+};
+
+// 下訂單步驟
+.step-container {
+  margin: auto;
+  max-width: 1200px;
+  padding: 30px 0;
+
+  .step-guide {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.6rem;
+  }
+}
+.step-confirm-color {
+  color:rgb(218, 218, 102);
+}
+
+// ICON與文字距離
+.bi {
+  padding-right: 20px;
+}
+@media (max-width:768px) {
+  .step-container {
+    .step-guide {
+      font-size: 1rem;
+    }
+  }
+  
+}
+
+/**最外層容器 */
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+@media (max-width: 992px) {
+  .wrapper {
+    flex-direction: column;
+  };
+}
+/**tabl標籤 */
+@media (max-width: 576px) {
+  .table {
+    width: 90%;
+    /* font-size: 12px; */
+  }
+}
+/**刪除圖示 */
+@media (max-width: 576px) {
+  .i-wrapper {
+    /* padding: 0 !important; */
+    width: 10% !important;
+  }
+}
+/**單價容器 */
+@media (max-width: 576px) {
+  .price-wrapper{
+    width: 10% !important;
+  }
+} 
+@media (max-width: 375px) {
+  .price-wrapper {
+    width: 50%;
+  }
+}
+
+
+
+
+/**圖片容器 */
+.img-wrapper{
+    max-width: 50%;
+  }
+@media (max-width: 576px){
+  .img-wrapper {
+    width: 20%;
+  }
+};
+@media (max-width: 375px) {
+  .img-wrapper {
+    width: 25%;
+  }
+};
+
+/**品名容器 */
+.title-wrapper {
+  /* outline: auto; */
+}
+@media (max-width: 576px) {
+  .title-wrapper {
+    width: 20% !important;
+  }
+}
+
+/**Input數量容器 */
+#qty-wrapper {
+  /* outline: auto; */
+}
+@media (max-width: 576px) {
+  #qty-wrapper {
+    width: 20% !important;
+  };
+  /* .input-group-sm >.form-control {
+    padding: 0rem;
+  } */
+}
+
+
+/** Input樣式 */
+.input {
+ border: none;
+ border-radius: 15px;
+ padding: 15px;
+ background-color: #e8e8e8;
+ box-shadow: 6px 6px 12px #ffffff,
+             -6px -6px 12px #c5c5c5;
+ font-size: medium;
+ font-weight: bold;
+
+}
+
+
+/** 表單驗證 */
+/** 大容器 */
+.wrapper2 {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .wrapper2 {
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-items: center;
+  }
+}
+
+/**Input容器 */
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  max-width: 70%;
+  z-index: 999999;
+}
+@media (max-width) {
+  .form-wrapper {
+    width: 95%;
+    margin: auto;
+    justify-content: left;
+  }
+}
+
+/**訂單容器 */
+.order-detail {
+  display: flex;
+  align-items: flex-start;
+  margin-right: 50px;
+}
+@media (max-width: 768px) {
+  .order-detail {
+    width: 90%;
+    margin: 0 50px 0 50px;
+  }
+};
+
+// 按鈕樣式
+.button {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  font-size: 18px;
+  color: rgb(193, 163, 98);
+  border: 2px solid rgb(193, 163, 98);
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: rgb(193, 163, 98);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button:hover::before {
+  scale: 3;
+}
+
+.button:hover {
+  color: #212121;
+  scale: 1;
+  box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+}
+
+.button:active {
+  scale: 1;
+}
+
+
+
+
+
+

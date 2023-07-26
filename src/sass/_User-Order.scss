@@ -1,0 +1,74 @@
+// HEADER 
+.page-header {
+  background: url(../assets/images/ORDER/Order.jpg) center center no-repeat;
+  background-size: cover;
+  margin-top: 66px;
+
+  .page-header .breadcrumb-item+.breadcrumb-item::before {
+    color: white;
+  };
+
+  .page-header .breadcrumb-item,
+  .page-header .breadcrumb-item a {
+    font-size: 18px;
+    color: white;
+  };
+  
+  li:hover a{
+    color: cadetblue;
+  }
+};
+
+
+// TABLE表格
+.table-type {
+  max-width: 1200px;
+  margin: auto;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+
+  // 表頭
+  th {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+  }
+
+  // tr底線顏色
+  tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+
+  // 最後<tr>補底線
+  tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  // <tr>偶數橫排, 灰底綠字 
+  tbody > tr:nth-of-type(even) >td {
+    font-weight: bold;
+    width: 100px;
+    background-color: #f3f3f3;
+    color: #00985e;
+  }
+};
+
+
+// <table> 992px縮排
+@media (max-width: 992px) {
+  table {
+    width: 98%;
+  }
+}
+
+// 隱藏「檢視」576px縮排
+@media (max-width: 576px) {
+  thead > tr> th:nth-last-child(1)
+  ,tbody > tr> td:nth-last-child(1) {
+    display: none;
+  }
+}
+
+

@@ -1,0 +1,71 @@
+<template>
+  <div class="container">
+    <div class="card">
+      <img :src="news.image" alt="" />
+      <div class="date">{{ filterStore.date(news.create_at) }}</div>
+      <!-- <i class="ion-film-marker"></i> -->
+      <div class="card-content">
+        <h3>{{news.title}}</h3>
+        <p>{{ news.description }}</p>
+        <p>{{ news.content }}</p>
+        <button>
+          <router-link to="/user/userNews" class="item">
+          </router-link>BACK
+        </button>
+      </div><a href="#"></a>
+    </div>
+
+        <!--- 底部廣告 --->
+        <div class="ad-bottom">
+          <div class="mb-3">
+            <div class="section-title1 mb-0 rounded">
+                <h4 class="m-0 font-weight-bold">ADVERTISEMENT</h4>
+            </div>
+            <div class="bg-white text-center border border-top-0 p-3 rounded">
+                <router-link to="/user/Allproducts" class="item">
+                  <img class="img-fluid rounded" src="../assets/images/NEWS/AD.png" alt="">
+                </router-link>
+            </div>
+          </div>
+        </div>
+
+  </div>
+
+  <Footer></Footer>
+</template>
+
+<script setup>
+import axios from "axios";
+import { ref, onMounted } from "Vue";
+// Vue Router 4.x, 使用route方法 (透過ID, 點擊取得單一新聞)
+import { useRoute } from "vue-router";
+const route = useRoute();
+
+// 生命週期 >> 渲染「單一新聞」
+const id = ref(null);
+onMounted(() => {
+  id.value = route.params.newsId;
+  getNews();
+})
+
+// 取得單一新聞
+const news = ref({});
+const getNews = () => {
+  const url = `${import.meta.env.VITE_API_SERVER}api/${import.meta.env.VITE_APP_PATH}/article/${id.value}`;
+  axios.get(url)
+    .then((response) => {
+      news.value = response.data.article;
+      console.log(news.value);
+    });
+};
+
+// 千分位&當地日期 (這邊採用Pinia, 非Mitt)
+import useFilterStore from "../stores/filter.js" 
+const filterStore = useFilterStore();
+// Footer頁尾
+import Footer from "../components/Footer.vue";
+</script>
+
+<style lang="scss" scoped>
+@import "../sass/_ReadMoreNews.scss";
+</style>
