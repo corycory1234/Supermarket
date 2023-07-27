@@ -6,17 +6,15 @@
   li:hover a{
     color:cadetblue;
   }
-};
-
+}
 .page-header .breadcrumb-item+.breadcrumb-item::before {
   color: white;
-};
-
+}
 .page-header .breadcrumb-item,
 .page-header .breadcrumb-item a {
     font-size: 18px;
     color: white;
-};
+}
 
 // 下訂單步驟
 .step-container {
@@ -56,7 +54,7 @@
 @media (max-width: 992px) {
   .wrapper {
     flex-direction: column;
-  };
+  }
 }
 /**tabl標籤 */
 @media (max-width: 576px) {
@@ -95,12 +93,12 @@
   .img-wrapper {
     width: 20%;
   }
-};
+}
 @media (max-width: 375px) {
   .img-wrapper {
     width: 25%;
   }
-};
+}
 
 /**品名容器 */
 .title-wrapper {
@@ -119,33 +117,59 @@
 @media (max-width: 576px) {
   #qty-wrapper {
     width: 20% !important;
-  };
+  }
   /* .input-group-sm >.form-control {
     padding: 0rem;
   } */
 }
 
 
-/** Input樣式 */
-.input {
- border: none;
- border-radius: 15px;
- padding: 15px;
- background-color: #e8e8e8;
- box-shadow: 6px 6px 12px #ffffff,
-             -6px -6px 12px #c5c5c5;
- font-size: medium;
- font-weight: bold;
-
-}
 
 
-/** 表單驗證 */
-/** 大容器 */
+
+// 收貨資訊大容器 
 .wrapper2 {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   justify-content: center;
+
+  // 表單驗證 Input容器 
+  .form-wrapper {
+    // margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    max-width: 70%;
+    z-index: 999999;
+
+    // Input樣式 
+    .input {
+      border: none;
+      border-radius: 15px;
+      padding: 20px;
+      background-color: #e8e8e8;
+      box-shadow: 6px 6px 12px #ffffff,
+                  -6px -6px 12px #c5c5c5;
+      font-size: medium;
+      font-weight: bold;
+      width: 75%;
+    }
+    textarea {
+      height: 200px;
+    }
+  }
+
+  // 訂單容器 
+  .order-detail {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 150px;
+  }
 }
+
+
 @media (max-width: 768px) {
   .wrapper2 {
   flex-direction: column;
@@ -154,37 +178,45 @@
   }
 }
 
-/**Input容器 */
-.form-wrapper {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
-  max-width: 70%;
-  z-index: 999999;
-}
-@media (max-width) {
-  .form-wrapper {
-    width: 95%;
-    margin: auto;
-    justify-content: left;
+
+@media (max-width:992px) {
+  .wrapper2 {
+    .form-wrapper {
+      width: 95%;
+      margin: auto;
+      align-items: end;
+    }
   }
 }
 
-/**訂單容器 */
-.order-detail {
-  display: flex;
-  align-items: flex-start;
-  margin-right: 50px;
-}
+
 @media (max-width: 768px) {
   .order-detail {
-    width: 90%;
-    margin: 0 50px 0 50px;
+    width: 70%;
+    // margin: 0 50px 0 50px;
   }
-};
+}
+
+@media (max-width: 414px) {
+  .form-btn-container {
+    padding-left: 0;
+    .button {
+      padding: 0px 5px;
+    }
+  }
+
+  .order-detail {
+    margin: auto;
+    
+  }
+}
 
 // 按鈕樣式
+.form-btn-container {
+  display: flex;
+  justify-content: center;
+  
+}
 .button {
   cursor: pointer;
   position: relative;

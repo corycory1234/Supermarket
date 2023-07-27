@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import { ref, defineExpose } from "vue";
+import { ref } from "vue";
 const buttonArr = ref([
   {
     title: "確認商品",

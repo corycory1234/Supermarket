@@ -46,7 +46,7 @@
   <div class="container py-5 h-100">
     <div class="row login-container h-100">
       <div class="col col-xl-10">
-        <div class="card">
+        <div class="login-card">
           <div class="row g-0">
           
             <div class="col-md-6 col-lg-7 d-flex align-items-center">

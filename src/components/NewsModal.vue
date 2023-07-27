@@ -89,7 +89,7 @@
 </template>
 <script setup>
 import axios from 'axios';
-import {ref, onMounted, defineExpose, watch} from "Vue";
+import {ref, onMounted, watch} from "Vue";
 import Modal from "bootstrap/js/dist/modal.js"; 
 
 // 取得Modal視窗的DOM, 並defineExpose把ref屬性傳給父元件News.vue

@@ -9,15 +9,15 @@
     li:hover a{
     color:cadetblue;
   }
-};
+}
 .page-header .breadcrumb-item+.breadcrumb-item::before {
   color: white;
-};
+}
 .page-header .breadcrumb-item,
 .page-header .breadcrumb-item a {
     font-size: 18px;
     color: white;
-};
+}
 
 
 // 新聞大容器
@@ -70,8 +70,8 @@
         transform-origin: 50% 100%;
 
         transition: all 0.4s ease;
-      };
-    };
+      }
+    }
 
     // 文字容器
     .txt-container {
@@ -100,7 +100,7 @@
           div {
             padding-left: 20px
           }
-        };
+        }
         // .info-txt-container {
         //   display: flex;
         //   div {
@@ -110,14 +110,14 @@
         //     padding-right: 2px;
         //   }
         // }
-      };
-    };
-  };
+      }
+    }
+  }
     // 分頁位置
     .pagination-bottom {
       margin: auto
     }
-  };
+  }
 
   // 右側廣告區
   .ad-container {
@@ -179,8 +179,7 @@
         }
       }
     }
-    
-  };
+  }
 }
 
 
@@ -260,7 +259,6 @@
 
     }
   }
-
 }
 
 

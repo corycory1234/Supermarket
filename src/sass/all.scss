@@ -1,9 +1,17 @@
-
 @import "footer";
 @import "home-news";
 @import "home-about";
 @import "about";
 @import "User-News";
+
+@import "Cart";
+@import "Favorite";
+@import "Home";
+@import "Login";
+@import "ReadMoreNews";
+@import "User-Nav";
+@import "User-Order";
+@import "User-Products";
 
 *{
   margin: 0;

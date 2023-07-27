@@ -56,39 +56,41 @@ a{
   .item {
     // outline: auto
   }
-};
 
-// 購物車右上ICON數量
-.qty-cart {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background-color: red;
-  text-align: center;
-  color: #fff;
-  line-height: 1.2rem;
-  position: absolute;
-  top: 5%;
-  right: 3%;
-}
-// 我的最愛右上ICON數量
-.qty-favorite {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background-color: red;
-  text-align: center;
-  color: #fff;
-  line-height: 1.2rem;
-  position: absolute;
-  top: 5%;
-  right: 10%;
+    // 購物車右上ICON數量
+  .qty-cart {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: red;
+    text-align: center;
+    color: #fff;
+    line-height: 1.2rem;
+    position: absolute;
+    top: 5%;
+    right: 3%;
+  }
+  // 我的最愛右上ICON數量
+  .qty-favorite {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: red;
+    text-align: center;
+    color: #fff;
+    line-height: 1.2rem;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+  }
+
+  // 我的收藏
+  .bi-heart-fill,.bi-cart,.bi-person-fill-gear {
+    font-size: 1.5rem;
+  }
 }
 
-// 我的收藏
-.bi-heart-fill,.bi-cart,.bi-person-fill-gear {
-  font-size: 1.5rem;
-}
+
 
 
 // 搜尋框
@@ -112,46 +114,44 @@ a{
   // outline-offset: 5px;
   background-color: rgba(255,211,6,.8);;
 }
-
-// 搜尋放大鏡
-button {
-  border: none;
-  background-color: rgba(102,179,255,0);
-  padding-left: 10px;
-  i {
-    font-size: 26px;
+.search-li {
+  // 搜尋放大鏡
+  button {
+    border: none;
+    background-color: rgba(102,179,255,0);
+    padding-left: 10px;
+    i {
+      font-size: 26px;
+    }
   }
 }
 
-// 漢堡線
-.showBurger {
-  // display: none;
-}
+
 .navbar-toggler-icon {
   color: green;
 }
 
 // 隱藏Nav & 顯示漢堡
-@media (max-width: 992px) {
-  .navBar {
-    // max-height: 0;
-    // overflow: hidden;
-    // flex-direction: column;
-  }
+// @media (max-width: 992px) {
+//   .navBar {
+//     // max-height: 0;
+//     // overflow: hidden;
+//     // flex-direction: column;
+//   }
   
-  .showBurger {
-    // display: block;
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-    // z-index: 200;
+//   .showBurger {
+//     // display: block;
+//     // position: absolute;
+//     // top: 0;
+//     // right: 0;
+//     // z-index: 200;
 
-    .bi-list{
-      // font-size: 3rem;
-      // color:  rgba(255,211,6,);;
-    }
-  }
-}
+//     .bi-list{
+//       // font-size: 3rem;
+//       // color:  rgba(255,211,6,);;
+//     }
+//   }
+// }
 
 
 
@@ -282,10 +282,10 @@ button {
       font-size: 14px;
     }
 
-    // hover動畫
-    .item:hover li:before{
-    // width: 0%;
-    }
+    // // hover動畫
+    // .item:hover li:before{
+    // // width: 0%;
+    // }
     .item:hover li{
     color: white;
     }

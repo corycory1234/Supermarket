@@ -1,7 +1,26 @@
+// HEADER 
+.page-header {
+  background: url(../assets/images/NEWS/NEWS-Header.jpg) center center no-repeat;
+  background-size: cover;
+  margin-top: 66px;
+    li:hover a{
+    color:cadetblue;
+  }
+}
+.page-header .breadcrumb-item+.breadcrumb-item::before {
+  color: white;
+}
+.page-header .breadcrumb-item,
+.page-header .breadcrumb-item a {
+    font-size: 18px;
+    color: white;
+}
+
 // 最外層容器
-.container {
+.read-more-container {
   max-width: 1200px;
-  outline: auto;
+  // outline: auto;
+  margin: auto;
   display: flex;
 
   // 廣告底部
@@ -12,10 +31,9 @@
     flex-direction: column;
     justify-content: center;
   }
-}
 
-// 卡片容器
-.card {
+  // 卡片容器
+.read-more-card {
   font-family: 'Raleway', Arial, sans-serif;
   color: #fff;
   position: relative;
@@ -72,8 +90,8 @@
     font-size: 30px;
     transform: rotateY(-90deg);
     transition-delay: 0s;  
+    }
   }
-}
 
 // 卡片內容
 .card-content {
@@ -83,7 +101,7 @@
   h3,p {
     margin: 0;
     padding: 0;
-  };
+  }
 
   h3 {
     margin-bottom: 10px;
@@ -91,12 +109,12 @@
     font-weight: 600;
     color: #333333;
     text-transform: uppercase;
-  };
+  }
   p {
     font-size: 0.8em;
     margin-bottom: 20px;
     line-height: 1.6em;
-  };
+  }
   button {
     border: medium none;
     padding: 10px 20px;
@@ -118,20 +136,26 @@
 }
 
 // Hover動畫
-.card:hover img {
+.read-more-card:hover img {
   transform: scale(1.1);
 }
-.card:hover .date {
+.read-more-card:hover .date {
   transform: rotateY(90deg);
   transition-delay: 0s;
 }
-.card:hover i {
+.read-more-card:hover i {
   transform: rotateY(0);
   transition-delay: 0.2s;
 }
-.card:hover button {
+.read-more-card:hover button {
   background-color: #117964;
 }
+
+}
+
+
+
+
 
 // 768斷點
 @media (max-width:768px) {
@@ -155,9 +179,9 @@
 }
 // 414斷點
 @media (max-width: 414px) {
-  .container {
+  .read-more-container {
     flex-direction: column;
-    .card {
+    .read-more-card {
       width: 98%;
    };
 

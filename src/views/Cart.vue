@@ -207,7 +207,7 @@
                     v-model="form.message"></textarea>
         </div>
 
-        <div class="text-end">
+        <div class="form-btn-container">
           <button class=" text-start button" @click="back">上一步</button>
           <button class=" button">送出訂單</button>
         </div>
@@ -215,7 +215,7 @@
     </div>
     
           <!--- 右邊統計總價欄 --->
-        <div class="col-lg-4 col-md-4 col-sm-12 mt-5 justify-content-center order-detail">
+        <div class="col-lg-2 col-md-4 col-sm-12 mt-5 justify-content-center order-detail">
         <table class="table align-middle">
 
           <tfoot>
@@ -225,15 +225,19 @@
               </tr>
               <tr>
                 <th colspan="3" class="text-start">原價  </th>
-                <td class="text-end"> {{ filterStore.currency(cart.total) }}</td>
+                <td class="text-end"> {{ filterStore.currency(total) }}</td>
               </tr>
-              <tr v-if="cart.final_total !== cart.total">
+              <tr v-if="final_total !== total">
                 <th colspan="3" class="text-start text-success">優惠券折扣</th>
-                <td class="text-end text-success">{{ filterStore.currency(cart.final_total) }}</td>
+                <td class="text-end text-success">{{ filterStore.currency(final_total) }}</td>
               </tr>
-              <tr>
+              <tr v-if="!coupon_final_total">
                 <th colspan="3">總計</th>
-                <td class="text-end">{{ total - final_total}}</td>
+                <td class="text-end">{{ total }}</td>
+              </tr>
+              <tr v-else>
+                <th colspan="3">折價後總計</th>
+                <td class="text-end">{{  total - final_total }}</td>
               </tr>
               
           </tfoot>
