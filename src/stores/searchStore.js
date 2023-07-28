@@ -34,7 +34,7 @@ export default defineStore ("useSearchStore", () => {
     })
   };
 
-// 正確的filter語法
+// 正確的filter語法 (待商榷)
 // filter針對陣列物件, 即便往內篩選, 回傳給filteredArr, 是一整包物件, 而不是只有回傳item.category!!!
 // 商品種類篩選
 const filteredArr = ref([]);

@@ -183,7 +183,7 @@ a{
     }
     li li {
       background-color: rgba(142, 142, 140, 0.5);
-      text-align: left; // 整個li內文字靠左
+      text-align: center; // 整個li內文字靠左
     }
     .search-li {
       position: absolute;
@@ -196,11 +196,11 @@ a{
     }
     .qty-favorite {
       top:80%;
-      right: 13%
+      right: 4%
     }
     .qty-cart {
       top: 91%;
-      right: 13%;
+      right: 4%;
     }
   }
 }
@@ -210,11 +210,11 @@ a{
 
     .qty-favorite {
       top:80%;
-      right: 11%
+      right: 1%
     }
     .qty-cart {
       top: 91%;
-      right: 11%;
+      right: 1%;
     }
 
     li {
@@ -228,11 +228,11 @@ a{
   .navBar {
     .qty-favorite {
       top:82%;
-      right: 11%;
+      right: 1%;
     }
     .qty-cart {
       top: 93%;
-      right: 11%;
+      right: 1%;
     }
 
     li {
@@ -251,6 +251,9 @@ a{
       width: 40%;
       font-size: 16px;
     }
+    .company-icon img{
+      width: 20%;
+    }
   }
 }
 
@@ -268,18 +271,20 @@ a{
     }
 
     .qty-favorite {
-      top:85%;
-      right: 13%;
+      top:81%;
+      right: 5%;
       width: 15px;
-      height: 20px;
-      font-size: 14px;
+      height: 15px;
+      font-size: 10px;
+      line-height: .8rem;
     }
     .qty-cart {
-      top: 97%;
-      right: 13%;
+      top: 92%;
+      right: 5%;
       width: 15px;
-      height: 20px;
-      font-size: 14px;
+      height: 15px;
+      font-size: 10px;
+      line-height: .8rem;
     }
 
     // // hover動畫

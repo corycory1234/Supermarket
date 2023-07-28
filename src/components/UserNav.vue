@@ -5,8 +5,8 @@
     <ul class="navBar ">
 
       <li>
-        <router-link :to="{ name: 'home' }" class="item">
-          <li>HOME</li>
+        <router-link :to="{ name: 'home' }" class="item ">
+          <li class="company-icon"><img src="../assets/images/ICON/icon-3.png" alt="" style="margin-bottom: 10px;"></li>
         </router-link>
       </li>
       

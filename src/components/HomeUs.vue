@@ -49,7 +49,8 @@
   <!-- About End -->
 </template>
 
-<script>
+<script setup>
+import router from '../router';
 </script>
 
 <style lang="scss" scoped>

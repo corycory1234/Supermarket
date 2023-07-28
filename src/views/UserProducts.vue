@@ -18,7 +18,7 @@
   </div>
   <!--- HEADER END --->
 
-
+  <div class="container-fluid">
   <div class="row">
     <div class="col-12 col-sm-12 col-md-3">
       
@@ -81,6 +81,7 @@
     </div>
 
 
+    
 <!---- filter種類跳出的卡片商品 ---->
   <div class="col-12 col-sm-12 col-md-9" v-else-if="filteredArr.length >0 ">
       <div class="row">
@@ -160,7 +161,7 @@
 
 
   </div>
-
+</div>
 <!-- <p v-if="refSearch">{{ refSearch.searchedArr }}</p> -->
 <!-- <Search 
 ref="refSearch"
@@ -203,28 +204,29 @@ onMounted(() => {
 });
 
 
-// 创建一个空对象来存储每个类别的数量
-const categoryCounts = {};
-// 遍历数据数组，计算每个类别的数量
-const getCategories = computed(() => {
-  allProducts.value.forEach(item => {
-    const category = item.category;
-    if (categoryCounts[category]) {
-    return  categoryCounts[category] += 1;
-    } else {
-      return categoryCounts[category] = 1;
-    }
-  });
+// // 创建一个空对象来存储每个类别的数量
+// const categoryCounts = {};
+// // 遍历数据数组，计算每个类别的数量
+// const getCategories = computed(() => {
+//   allProducts.value.forEach(item => {
+//     const category = item.category;
+//     console.log(allProducts.value);
+//     if (categoryCounts[category]) {
+//     return  categoryCounts[category] += 1;
+//     } else {
+//       return categoryCounts[category] = 1;
+//     }
+//   });
 
-  // 将结果整理为所需的形式
- result.value = Object.entries(categoryCounts).map(([category, number]) => ({
-    category,
-    number,
-    active: false,
-  }));
-  console.log(result.value);
-  return result.value;
-});
+//   // 将结果整理为所需的形式
+//  result.value = Object.entries(categoryCounts).map(([category, number]) => ({
+//     category,
+//     number,
+//     active: false,
+//   }));
+//   console.log(result.value);
+//   return result.value;
+// });
 
 // 點擊<li>, 呈現<li>底色
 const clickLi = (item) => {
@@ -235,6 +237,50 @@ const clickLi = (item) => {
     };
   });
 };
+
+// 所有種類
+const categoryCounts = computed(() => {
+  const counts = {};
+  allProducts.value.forEach(item => {
+    const category = item.category;
+    if (counts[category]) {
+      counts[category] += 1;
+    } else {
+      counts[category] = 1;
+    }
+  });
+  return counts;
+});
+
+// 創建計算屬性 getCategories 來獲取所有類別及其數量
+const getCategories = computed(() => {
+  const categories = Object.entries(categoryCounts.value).map(([category, number]) => ({
+    category,
+    number,
+    active: false,
+  }));
+
+// 新增「所有商品」選項，計算所有商品的數量
+const allProductsCount = allProducts.value.length;
+categories.unshift({ category: "所有商品", number: allProductsCount, active: false });
+
+return categories;
+});
+
+// 函數來篩選出特定類別的商品列表
+const filterCategory = (item) => {
+  searchedArr.value = [];
+  if (item.category === "所有商品") {
+    filteredArr.value = allProducts.value;
+  } else {
+    filteredArr.value = allProducts.value.filter((product) => product.category === item.category);
+  }
+};
+
+
+
+
+
 
 
 //  點選<li>,進行商品category判斷
@@ -345,7 +391,7 @@ import Footer from "../components/Footer.vue";
 // Pinia 搜尋BAR
 import UseSearchStore from "../stores/searchStore.js";
 const searchStore = UseSearchStore();
-const {searchArr, getProductsBySearch, filterCategory} = searchStore;
+const {searchArr, getProductsBySearch} = searchStore;
 const {searchedArr, searchTxt, filteredArr} = storeToRefs(searchStore); 
 </script>
 

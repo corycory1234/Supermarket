@@ -58,7 +58,7 @@
                     <!-- <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i> -->
                     <span class="h1 fw-bold mb-0">
                       <router-link :to="{ name: 'home' }" class="item">
-                        回首頁LOGO</router-link>
+                        <img src="../assets/images/ICON/icon-4.png" alt=""></router-link>
                     </span>
                   </div>
 

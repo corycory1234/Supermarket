@@ -8,7 +8,11 @@
             <div class="col-12">
               <div class="section-title1">
                 <h4 class="m-0 font-weight-bold">LATEST NEWS</h4>
-                <a class="text-secondary font-weight-medium text-decoration-none" href="">View All</a>
+                <a class="text-secondary font-weight-medium text-decoration-none" href="">
+                  <router-link to="/user/userNews" >
+                    View All
+                  </router-link>
+                </a>
               </div>
             </div>
             <div class="col-lg-6">

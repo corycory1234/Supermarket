@@ -7,11 +7,9 @@
     color:cadetblue;
   }
 }
-
 .page-header .breadcrumb-item+.breadcrumb-item::before {
   color: white;
 }
-
 .page-header .breadcrumb-item,
 .page-header .breadcrumb-item a {
     font-size: 18px;
@@ -38,8 +36,6 @@
     cursor: pointer;
     border-radius: 50px;
     transition: .3s ease-in-out;
-
-
   }
 }
 
