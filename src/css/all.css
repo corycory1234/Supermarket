@@ -1467,7 +1467,6 @@ img {
   display: flex;
 }
 
-/**右邊3廣告 */
 .index-banner {
   width: 40%;
   /* outline: 3px red solid; */
@@ -1491,11 +1490,9 @@ img {
   border-radius: 10px;
 }
 
-/*** Swiper輪播圖 ***/
 .swiper {
-  width: 60%;
   /* height: 400px; */
-  overflow: hidden;
+  border-radius: 5%;
 }
 
 .swiper-slide {
@@ -1504,9 +1501,6 @@ img {
 
 .swiper-slide img {
   width: 100%;
-  /* height:90%; */
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .swiper-pagination-bullet {
@@ -1535,18 +1529,22 @@ img {
   right: 0;
   left: 0;
   bottom: 0;
+  max-width: 100%;
+  height: auto;
   background: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
 }
 
 .popup-img {
-  margin: 100px auto;
+  margin: 350px auto;
   padding: 2px;
   background: #fff;
   border-radius: 5px;
-  width: 27%;
+  width: 20%;
   position: relative;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+  pointer-events: fill;
 }
 .popup-img .close-ad {
   position: absolute;
@@ -1561,28 +1559,115 @@ img {
   background-color: #fff;
 }
 
-@media (max-width: 768px) {
-  .popup-img {
-    width: 40%;
+@media (max-width: 992px) {
+  .popup-container {
+    margin-top: 0;
+    height: 100%;
+    -ms-touch-action: none;
+        touch-action: none;
+    pointer-events: all;
   }
-  .popup-img .close-ad {
+  .popup-container .popup-img {
+    margin: 410px auto;
+    width: 25%;
+  }
+  .popup-container .popup-img .close-ad {
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
     color: red;
   }
 }
-@media (max-width: 414px) {
-  .popup-img {
-    margin: 60px auto;
-  }
-  .popup-img img {
+@media (max-width: 768px) {
+  .popup-container {
+    margin-top: 0;
     height: 100%;
   }
-  .popup-img .close-ad {
-    width: 20px;
-    height: 20px;
-    font-size: 14px;
+  .popup-container .popup-img {
+    margin: 350px auto;
+    width: 25%;
+  }
+  .popup-container .popup-img .close-ad {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: red;
+  }
+}
+@media (max-width: 680px) {
+  .popup-container {
+    margin-top: 0;
+    height: 70%;
+  }
+  .popup-container .popup-img {
+    margin: 300px auto;
+  }
+}
+@media (max-width: 480px) {
+  .popup-container {
+    margin-top: 0;
+    height: 50%;
+  }
+  .popup-container .popup-img {
+    margin: 220px auto;
+  }
+  .popup-container .popup-img .close-ad {
+    top: 0.3rem;
+    right: 0.3rem;
+    width: 15px;
+    height: 15px;
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 414px) {
+  .popup-container {
+    margin-top: 0;
+    height: 40%;
+  }
+  .popup-container .popup-img {
+    margin: 160px auto;
+  }
+  .popup-container .popup-img img {
+    height: 100%;
+  }
+  .popup-container .popup-img .close-ad {
+    top: 0.3rem;
+    right: 0.3rem;
+    width: 15px;
+    height: 15px;
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 375px) {
+  .popup-container {
+    margin-top: 0;
+    height: 35%;
+  }
+  .popup-container .popup-img {
+    margin: 100px auto;
+  }
+  .popup-container .popup-img .close-ad {
+    top: 0.3rem;
+    right: 0.3rem;
+    width: 15px;
+    height: 15px;
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 320px) {
+  .popup-container {
+    margin-top: 0;
+    height: 30%;
+  }
+  .popup-container .popup-img {
+    margin: 120px auto;
+  }
+  .popup-container .popup-img .close-ad {
+    top: 0.2rem;
+    right: 0.2rem;
+    width: 15px;
+    height: 15px;
+    font-size: 0.5rem;
   }
 }
 .login {

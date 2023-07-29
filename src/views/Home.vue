@@ -1,4 +1,5 @@
 <template >
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 <!---- 導覽列 ---->
 <UserNav></UserNav> 
 
@@ -27,7 +28,7 @@
 </div>
 
 <!---- PopUp廣告 ---->
-<div id="popup" class="popup-container" v-if="isPopUp">
+<div id="popup" class="popup-container" v-if="isPopUp" @mousewheel.prevent>
   <div class="popup-img">
     <button type="button" class="close-ad" @click="closeAd">X</button>
     <img class="rounded" src="../assets/images/Home-AD/Popup1.png" alt="">
@@ -49,7 +50,7 @@
 
 
 <!---- 活動輪播圖 ---->
-<div class="swiper-container">
+<div class="container swiper-container">
   <Swiper 
     :modules="[Pagination, Navigation, Autoplay]" 
     :pagination="true"
@@ -58,14 +59,14 @@
     :loop="true"
     :grabCurosr="true">
     <SwiperSlide v-for="(pic, index) in swiperPics" :key="index">
-      <img :src="`/src/assets/images/${pic}`" alt="">
+      <img :src="`/src/assets/images/Home-AD/${pic}`" alt="">
     </SwiperSlide>
   </Swiper>
-  <div class="index-banner">
+  <!-- <div class="index-banner">
     <div class="index-banner-img-wrapper"><img src="../assets/images/Home-AD/home-AD3.jpg" alt=""></div>
     <div class="index-banner-img-wrapper"><img src="../assets/images/Home-AD/home-AD4.jpg" alt=""></div>
     <div class="index-banner-img-wrapper"><img src="../assets/images/Home-AD/home-AD5.jpg" alt=""></div>    
-  </div>
+  </div> -->
 </div>
 
 <!---- 新聞 ---->
@@ -88,9 +89,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 const swiperPics = [
-  "carousel1.png",
-  "carousel2.png",
-  "carousel3.png",
+  "home-AD3.jpg",
+  "home-AD4.jpg",
+  "home-AD5.jpg",
 ];
 
 // 導覽列
@@ -112,10 +113,8 @@ const closeAd = () => {
   isPopUp.value = false;
 }
 onMounted((event) => {
-  setTimeout(showAd, 3000),
-  document.addEventListener("click", (event) => { 
-    clickOutside(event)
-  });
+  setTimeout(showAd, 1000),
+  document.addEventListener("click", clickOutside);
 });
 const clickOutside = (event) => {
   const popupID = document.querySelector("#popup");
@@ -148,34 +147,34 @@ const clickOutside = (event) => {
 //   border-radius: 10px;
 // }
 /*** Swiper輪播圖 ***/
-.swiper{
-  width: 60%;
-  /* height: 400px; */
-  overflow: hidden;
-}
-.swiper-slide {
-  margin: 15px 0;
-}
-.swiper-slide img{
-  width: 100%;
-  /* height:90%; */
-  object-fit:cover;
-}
-.swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  opacity: 1;
-}
-.swiper-pagination-bullet-active{
-  background-color: goldenrod;
-}
-.swiper-button-prev {
-  color: goldenrod;
-}
-.swiper-button-next {
-  color: goldenrod;
-}
+// .swiper{
+//   width: 60%;
+//   /* height: 400px; */
+//   overflow: hidden;
+// }
+// .swiper-slide {
+//   margin: 15px 0;
+// }
+// .swiper-slide img{
+//   width: 100%;
+//   /* height:90%; */
+//   object-fit:cover;
+// }
+// .swiper-pagination-bullet {
+//   width: 20px;
+//   height: 20px;
+//   background-color: #fff;
+//   opacity: 1;
+// }
+// .swiper-pagination-bullet-active{
+//   background-color: goldenrod;
+// }
+// .swiper-button-prev {
+//   color: goldenrod;
+// }
+// .swiper-button-next {
+//   color: goldenrod;
+// }
 
 
 
