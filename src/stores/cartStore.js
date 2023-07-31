@@ -14,6 +14,7 @@ export default defineStore ("useCartStore", () => {
     const getCartApi = `${import.meta.env.VITE_API_SERVER}api/${import.meta.env.VITE_APP_PATH}/cart`;
       axios.get(getCartApi)
         .then((response) => {
+          console.log(response);
           cart.value = response.data.data;
           total.value = response.data.data.total; // 總價(未折扣)
           final_total.value = response.data.data.final_total; // 總價(折扣後)
@@ -41,12 +42,24 @@ export default defineStore ("useCartStore", () => {
       getCart(); // 加入後, 購物車列表再渲染一次
     });
   }
+  
+  // 回傳購物車右上ICON數量
+  // const cartQty = computed(()=> {
+  //   if(cart.value.data && Array.isArray(cart.value.data.carts)) {
+  //     return cart.value.data.carts.length;
+  //   }
+  //   else {
+  //     return 0;
+  //   }
+  // })
 
   // 以物件方式return, 讓組件使用
   return {
-    getCart, cart, idArr, removeCartItem, addCart, total, final_total
+    getCart, cart, idArr, removeCartItem, addCart, total, final_total,
   }
 })
+
+
 
 // export default defineStore ("cartStore", () => {
 

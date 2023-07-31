@@ -161,6 +161,15 @@
 
 
   </div>
+
+  <!-- <Pagination
+  :pages="pagination" 
+  :currentPage="currentPage"
+  :pageLength="pageLength"
+  @go-previous="getProducts"
+  @go-next="getProducts"
+  @emit-pages="getProducts">
+</Pagination> -->
 </div>
 <!-- <p v-if="refSearch">{{ refSearch.searchedArr }}</p> -->
 <!-- <Search 
@@ -200,7 +209,7 @@ const result = ref([]);
 onMounted(() => {
   getProducts();
   getProductsBySearch();
-  getCart();
+  // getCart();
 });
 
 
@@ -262,7 +271,7 @@ const getCategories = computed(() => {
 
 // 新增「所有商品」選項，計算所有商品的數量
 const allProductsCount = allProducts.value.length;
-categories.unshift({ category: "所有商品", number: allProductsCount, active: false });
+categories.unshift({ category: "ALL", number: allProductsCount, active: false });
 
 return categories;
 });
@@ -270,7 +279,7 @@ return categories;
 // 函數來篩選出特定類別的商品列表
 const filterCategory = (item) => {
   searchedArr.value = [];
-  if (item.category === "所有商品") {
+  if (item.category === "ALL") {
     filteredArr.value = allProducts.value;
   } else {
     filteredArr.value = allProducts.value.filter((product) => product.category === item.category);
@@ -326,7 +335,7 @@ const filterCategory = (item) => {
 // Pinia 「加入購物車按鈕、取得所有產品列表、加入我的最愛」
 import useProductsStore from "../stores/productsStore.js";
 const productsStore = useProductsStore();
-const {allProducts} = storeToRefs(productsStore);
+const {allProducts, pagination, currentPage, pageLength} = storeToRefs(productsStore);
 const {addCart, getProducts, addFavorite} = productsStore
 
 // Pinia 「取得購物車列表」
@@ -334,15 +343,15 @@ import useCartStore from "../stores/cartStore.js";
 import { storeToRefs } from "pinia";
 const cartStore = useCartStore();
 const {cart, idArr} = storeToRefs(cartStore);
-const {getCart} = cartStore;
+// const {getCart} = cartStore;
 
 // 監聽idArr陣列長度, 若有變動, 則getCart刷新, idArr會再取得新Length
-watch(
-  () => idArr.value,
-  (newIdArr) => {
-    getCart();
-  }
-)
+// watch(
+//   () => idArr.value,
+//   (newIdArr) => {
+//     getCart();
+//   }
+// )
 
 // 查看更多
 import router from "../router/index.js"
@@ -392,7 +401,10 @@ import Footer from "../components/Footer.vue";
 import UseSearchStore from "../stores/searchStore.js";
 const searchStore = UseSearchStore();
 const {searchArr, getProductsBySearch} = searchStore;
-const {searchedArr, searchTxt, filteredArr} = storeToRefs(searchStore); 
+const {searchedArr, searchTxt, filteredArr} = storeToRefs(searchStore);
+
+// 分頁
+import Pagination from "../components/Pagination.vue";
 </script>
 
 <style lang="scss" scoped>

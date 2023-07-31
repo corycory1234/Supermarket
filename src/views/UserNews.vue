@@ -137,7 +137,7 @@
 </template>
 
 <script setup>
-import {ref, onMounted} from "Vue";
+import {ref, onMounted} from "vue";
 import axios from "axios";
 onMounted(() => { getNews(); });
 

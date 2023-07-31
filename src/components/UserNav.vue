@@ -148,36 +148,18 @@
 </template>
 
 <script setup>
-import {ref, onMounted, watch, computed} from "Vue";
+import {ref, onMounted, watch, computed} from "vue";
 import axios from "axios";
-
-// Pinia Options語法
-// import useCartStore from "../stores/cartStore.js"
-// import { storeToRefs } from "pinia";
-// const cartStore = useCartStore();
-// let {cartLength} = storeToRefs(cartStore);
-// onMounted(() => {
-//   cartStore.GET_CART;
-// })
-// const cartLength2 = computed(() => {
-//   return cartLength.value ? cartLength.value.length : 0;
-// })
-// console.log(cartStore); 
-
-// const del = computed(() => {
-//   return cartStore.removeCartItem();
-// })
-
 
 // Pinia 購物車數字ICON
 import useCartStore from "../stores/cartStore.js";
-import { storeToRefs } from "Pinia"; // storeToRefs只適用state數據&getters, actions不行
+import { storeToRefs } from "pinia"; // storeToRefs只適用state數據&getters, actions不行
 const cartStore = useCartStore();
-const {cart, idArr} = storeToRefs(cartStore); // State數據, 解構賦值之方式
+const {cart, idArr, } = storeToRefs(cartStore); // State數據, 解構賦值之方式
 const {getCart} = cartStore; // Actions方法, 解構賦值之方式
-// onMounted(() => { // 要記得掛載API, 才會取得購物車資料
-//   getCart();
-// })
+onMounted(() => { // 要記得掛載API, 才會取得購物車資料
+  getCart();
+})
 console.log(idArr.value.length)
 
 // Pinia 我的最愛數字ICON
@@ -190,11 +172,6 @@ import UseSearchStore from "../stores/searchStore.js";
 const searchStore = UseSearchStore();
 const {searchArr, getProductsBySearch, filterCategory} = searchStore;
 const {searchedArr, searchTxt, filteredArr} = storeToRefs(searchStore); 
-
-// 漢堡線
-const clickBurger = () => {
-  
-}
 
 </script>
 <style lang="scss" scoped>

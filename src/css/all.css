@@ -630,7 +630,7 @@ img {
 }
 .news-container .ad-container .ad-top {
   width: 100%;
-  height: 40%;
+  height: auto;
 }
 .news-container .ad-container .ad-top a {
   display: block;
@@ -667,15 +667,6 @@ img {
   .news-container .ad-container {
     width: 98%;
     margin-top: 20px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .news-container .ad-container .ad-top {
-    padding-right: 30px;
   }
   .news-container .ad-container .ad-top span {
     font-size: 0.8rem;
@@ -911,7 +902,7 @@ img {
 }
 /**Input數量容器 */
 #qty-wrapper {
-  /* outline: auto; */
+  outline: auto;
 }
 
 @media (max-width: 576px) {
@@ -1301,7 +1292,6 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../assets/images/header.jpg");
   background-size: cover;
   background-position: center;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -1536,7 +1526,6 @@ img {
 }
 
 .popup-img {
-  margin: 350px auto;
   padding: 2px;
   background: #fff;
   border-radius: 5px;
@@ -1545,11 +1534,17 @@ img {
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
   pointer-events: fill;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 43%;
+  left: 43%;
 }
 .popup-img .close-ad {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.5rem;
+  right: 0.5rem;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -1559,35 +1554,50 @@ img {
   background-color: #fff;
 }
 
+@media (max-width: 1200px) {
+  .popup-container {
+    margin-top: 0;
+    width: 100%;
+    height: 90%;
+  }
+}
 @media (max-width: 992px) {
   .popup-container {
     margin-top: 0;
-    height: 100%;
-    -ms-touch-action: none;
-        touch-action: none;
-    pointer-events: all;
+    width: 100%;
+    height: 100.5%;
   }
-  .popup-container .popup-img {
-    margin: 410px auto;
+  .popup-img {
+    top: 45%;
+    left: 45%;
     width: 25%;
   }
-  .popup-container .popup-img .close-ad {
+  .popup-img .close-ad {
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
     color: red;
   }
 }
+@media (max-width: 960px) {
+  .popup-container {
+    margin-top: 0;
+    width: 100%;
+    height: 90%;
+  }
+}
 @media (max-width: 768px) {
   .popup-container {
     margin-top: 0;
-    height: 100%;
+    width: 100%;
+    height: 80.5%;
   }
-  .popup-container .popup-img {
-    margin: 350px auto;
+  .popup-img {
+    top: 38%;
+    left: 42%;
     width: 25%;
   }
-  .popup-container .popup-img .close-ad {
+  .popup-img .close-ad {
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
@@ -1597,77 +1607,98 @@ img {
 @media (max-width: 680px) {
   .popup-container {
     margin-top: 0;
-    height: 70%;
+    width: 100%;
+    height: 70.5%;
   }
-  .popup-container .popup-img {
-    margin: 300px auto;
+  .popup-img {
+    top: 33%;
+    left: 43%;
+    width: 25%;
+  }
+  .popup-img .close-ad {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+    color: red;
+    font-size: 0.7rem;
+    width: 20px;
+    height: 20px;
   }
 }
 @media (max-width: 480px) {
   .popup-container {
     margin-top: 0;
-    height: 50%;
+    width: 100%;
+    height: 50.5%;
   }
-  .popup-container .popup-img {
-    margin: 220px auto;
+  .popup-img {
+    top: 23%;
+    left: 43%;
+    width: 25%;
   }
-  .popup-container .popup-img .close-ad {
+  .popup-img .close-ad {
     top: 0.3rem;
     right: 0.3rem;
+    font-size: 0.5rem;
     width: 15px;
     height: 15px;
-    font-size: 0.5rem;
   }
 }
 @media (max-width: 414px) {
   .popup-container {
     margin-top: 0;
-    height: 40%;
+    width: 100%;
+    height: 40.5%;
   }
-  .popup-container .popup-img {
-    margin: 160px auto;
+  .popup-img {
+    top: 20%;
+    left: 43%;
+    width: 25%;
   }
-  .popup-container .popup-img img {
-    height: 100%;
-  }
-  .popup-container .popup-img .close-ad {
+  .popup-img .close-ad {
     top: 0.3rem;
     right: 0.3rem;
+    font-size: 0.5rem;
     width: 15px;
     height: 15px;
-    font-size: 0.5rem;
   }
 }
 @media (max-width: 375px) {
   .popup-container {
     margin-top: 0;
-    height: 35%;
+    width: 100%;
+    height: 35.5%;
   }
-  .popup-container .popup-img {
-    margin: 100px auto;
+  .popup-img {
+    top: 17%;
+    left: 40%;
+    width: 20%;
   }
-  .popup-container .popup-img .close-ad {
-    top: 0.3rem;
-    right: 0.3rem;
+  .popup-img .close-ad {
+    top: 0.2rem;
+    right: 0.2rem;
+    font-size: 0.5rem;
     width: 15px;
     height: 15px;
-    font-size: 0.5rem;
   }
 }
 @media (max-width: 320px) {
   .popup-container {
     margin-top: 0;
-    height: 30%;
+    width: 100%;
+    height: 31%;
   }
-  .popup-container .popup-img {
-    margin: 120px auto;
+  .popup-img {
+    top: 14%;
+    left: 43%;
+    width: 25%;
   }
-  .popup-container .popup-img .close-ad {
+  .popup-img .close-ad {
     top: 0.2rem;
     right: 0.2rem;
+    font-size: 0.5rem;
     width: 15px;
     height: 15px;
-    font-size: 0.5rem;
   }
 }
 .login {
@@ -2187,12 +2218,6 @@ a {
 @media (max-width: 992px) {
   table {
     width: 98%;
-  }
-}
-@media (max-width: 576px) {
-  thead > tr > th:nth-last-child(1),
-  tbody > tr > td:nth-last-child(1) {
-    display: none;
   }
 }
 .page-header {

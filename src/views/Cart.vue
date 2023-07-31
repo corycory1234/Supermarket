@@ -73,7 +73,7 @@
                   {{ filterStore.currency(item.total) }}
                 </td>
 
-                <td>
+                <td >
                   <button type="button" class="btn btn-outline-danger btn-sm"
                           :disabled="status.loadingItem === item.id"
                           @click="removeCartItem(item.id)">
@@ -136,7 +136,7 @@
 
               <tr v-else>
                 <th colspan="3">折價後總計</th>
-                <td class="text-end">{{  total - final_total }}</td>
+                <td class="text-end">{{  filterStore.currency(total - final_total) }}</td>
               </tr>
           </tfoot>
           
@@ -237,7 +237,7 @@
               </tr>
               <tr v-else>
                 <th colspan="3">折價後總計</th>
-                <td class="text-end">{{  total - final_total }}</td>
+                <td class="text-end">{{  filterStore.currency(total - final_total) }}</td>
               </tr>
               
           </tfoot>
@@ -251,7 +251,7 @@
 
 <script setup>
 import axios from "axios";
-import { ref, onMounted } from "Vue";
+import { ref, onMounted } from "vue";
 onMounted(() => {
   getCart();
 })

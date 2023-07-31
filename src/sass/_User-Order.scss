@@ -64,11 +64,11 @@
 }
 
 // 隱藏「檢視」576px縮排
-@media (max-width: 576px) {
-  thead > tr> th:nth-last-child(1)
-  ,tbody > tr> td:nth-last-child(1) {
-    display: none;
-  }
-}
+// @media (max-width: 576px) {
+//   thead > tr> th:nth-last-child(1)
+//   ,tbody > tr> td:nth-last-child(1) {
+//     display: none;
+//   }
+// }
 
 

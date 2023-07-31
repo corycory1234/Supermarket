@@ -1,5 +1,4 @@
 <template >
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
 <!---- 導覽列 ---->
 <UserNav></UserNav> 
 
@@ -29,10 +28,12 @@
 
 <!---- PopUp廣告 ---->
 <div id="popup" class="popup-container" v-if="isPopUp" @mousewheel.prevent>
-  <div class="popup-img">
+
+</div>
+
+<div class="popup-img" v-if="isPopUp">
     <button type="button" class="close-ad" @click="closeAd">X</button>
     <img class="rounded" src="../assets/images/Home-AD/Popup1.png" alt="">
-  </div>
 </div>
 
 <!---- 舊HEADER ---->
@@ -58,8 +59,8 @@
     :autoplay="{delay: 1500, disableOnInteraction: false}"
     :loop="true"
     :grabCurosr="true">
-    <SwiperSlide v-for="(pic, index) in swiperPics" :key="index">
-      <img :src="`/src/assets/images/Home-AD/${pic}`" alt="">
+    <SwiperSlide v-for="(item, index) in swiperPics" :key="index">
+      <img :src="getSwiperPics(item.imgUrl)" alt="">
     </SwiperSlide>
   </Swiper>
   <!-- <div class="index-banner">
@@ -88,11 +89,21 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+// const swiperPics = [
+//   "home-AD3.jpg",
+//   "home-AD4.jpg",
+//   "home-AD5.jpg",
+// ];
+
+// Swiper取圖片之方法
+const getSwiperPics = (name) => {
+  return new URL (`../assets/images/Home-AD/${name}`, import.meta.url).href
+}
 const swiperPics = [
-  "home-AD3.jpg",
-  "home-AD4.jpg",
-  "home-AD5.jpg",
-];
+  {imgUrl:"home-AD3.jpg"},
+  {imgUrl:"home-AD4.jpg"},
+  {imgUrl:"home-AD5.jpg"},
+]
 
 // 導覽列
 import UserNav from "../components/UserNav.vue"
