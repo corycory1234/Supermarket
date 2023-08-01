@@ -48,12 +48,7 @@
                   <img :src="item.product.imageUrl" class="img-fluid" alt="" style="width: 100%">
                 </td>
 
-                <td >
-                  {{ item.product.title }}
-                  <!-- <div class="text-success" v-if="item.coupon">
-                    已套用{{item.coupon.code}}優惠券
-                  </div> -->
-                </td>
+                <td >{{ item.product.title }}</td>
 
                 <td>
                   <div class="input-group input-group-sm">
@@ -117,24 +112,24 @@
 
           <tfoot>
               <tr>
-                <th colspan="3">訂單明細</th>
+                <th colspan="3">Detail</th>
                 <td></td>
               </tr>
               <tr>
-                <th colspan="3" class="text-start">原價  </th>
+                <th colspan="3" class="text-start">Original Price</th>
                 <td class="text-end"> {{ filterStore.currency(cart.total) }}</td>
               </tr>
               <tr v-if="cart.final_total !== cart.total">
-                <th colspan="3" class="text-start text-success">優惠券折扣</th>
+                <th colspan="3" class="text-start text-success">Discounts</th>
                 <td class="text-end text-success">{{ filterStore.currency(cart.final_total) }}</td>
               </tr>
               <tr v-if="!coupon_final_total">
-                <th colspan="3">總計</th>
+                <th colspan="3">Total</th>
                 <td class="text-end">{{  total }}</td>
               </tr>
 
               <tr v-else>
-                <th colspan="3">折價後總計</th>
+                <th colspan="3">After Discount</th>
                 <td class="text-end">{{  filterStore.currency(total - final_total) }}</td>
               </tr>
           </tfoot>
@@ -143,13 +138,13 @@
 
 
         <div class="input-group mb-3 input-group-sm">
-            <input type="text" class="form-control" v-model="coupon_code" placeholder="請輸入優惠碼">
+            <input type="text" class="form-control" v-model="coupon_code" placeholder="Type Coupon Code">
             <div class="input-group-append">
               <button class="btn btn-outline-secondary" type="button" @click="addCouponCode">
-                套用優惠碼
+                USE COUPON
               </button>
 
-              <button class=" button" @click="next">下一步</button>
+              <button class=" button" @click="next">NEXT</button>
             </div>
           </div>
       </div>
@@ -168,47 +163,47 @@
           <label for="email" class="form-label">Email</label>
           <Field id="email" name="email" type="email" class="form-control input"
                    :class="{ 'is-invalid': errors['email'] }"
-                   placeholder="請輸入 Email" rules="email|required"
+                   placeholder="Email" rules="email|required"
                    v-model="form.user.email"></Field>
           <ErrorMessage name="email" class="invalid-feedback"></ErrorMessage>
         </div>
 
         <div class="mb-3">
-          <label for="name" class="form-label">收件人姓名</label>
+          <label for="name" class="form-label">Name</label>
           <Field id="name" name="姓名" type="text" class="form-control input"
                    :class="{ 'is-invalid': errors['姓名'] }"
-                   placeholder="請輸入姓名" rules="required"
+                   placeholder="Name" rules="required"
                    v-model="form.user.name"></Field>
           <ErrorMessage name="姓名" class="invalid-feedback"></ErrorMessage>
         </div>
 
         <div class="mb-3">
-          <label for="tel" class="form-label">收件人電話</label>
+          <label for="tel" class="form-label">Phone</label>
           <Field id="tel" name="電話" type="tel" class="form-control input"
                    :class="{ 'is-invalid': errors['電話'] }"
-                   placeholder="請輸入電話" rules="required"
+                   placeholder="Phone" rules="required"
                    v-model="form.user.tel"></Field>
           <ErrorMessage name="電話" class="invalid-feedback"></ErrorMessage>
         </div>
 
         <div class="mb-3">
-          <label for="address" class="form-label">收件人地址</label>
+          <label for="address" class="form-label">Address</label>
           <Field id="address" name="地址" type="text" class="form-control input"
                    :class="{ 'is-invalid': errors['地址'] }"
-                   placeholder="請輸入地址" rules="required"
+                   placeholder="Address" rules="required"
                    v-model="form.user.address"></Field>
           <ErrorMessage name="地址" class="invalid-feedback"></ErrorMessage>
         </div>
 
         <div class="mb-3">
-          <label for="message" class="form-label">留言</label>
+          <label for="message" class="form-label">Message</label>
           <textarea name="" id="message" class="form-control input" cols="30" rows="10"
                     v-model="form.message"></textarea>
         </div>
 
         <div class="form-btn-container">
-          <button class=" text-start button" @click="back">上一步</button>
-          <button class=" button">送出訂單</button>
+          <button class=" text-start button" @click="back">BACK</button>
+          <button class=" button">SEND</button>
         </div>
       </Form>
     </div>
@@ -219,23 +214,23 @@
 
           <tfoot>
               <tr>
-                <th colspan="3">訂單明細</th>
+                <th colspan="3">DETAIL</th>
                 <td></td>
               </tr>
               <tr>
-                <th colspan="3" class="text-start">原價  </th>
+                <th colspan="3" class="text-start">Original Price  </th>
                 <td class="text-end"> {{ filterStore.currency(total) }}</td>
               </tr>
               <tr v-if="final_total !== total">
-                <th colspan="3" class="text-start text-success">優惠券折扣</th>
+                <th colspan="3" class="text-start text-success">Discount</th>
                 <td class="text-end text-success">{{ filterStore.currency(final_total) }}</td>
               </tr>
               <tr v-if="!coupon_final_total">
-                <th colspan="3">總計</th>
+                <th colspan="3">Total</th>
                 <td class="text-end">{{ total }}</td>
               </tr>
               <tr v-else>
-                <th colspan="3">折價後總計</th>
+                <th colspan="3">After Discount</th>
                 <td class="text-end">{{  filterStore.currency(total - final_total) }}</td>
               </tr>
               

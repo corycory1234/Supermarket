@@ -25,12 +25,12 @@
   <table class="table mt-4 table-type">
     <thead>
       <tr>
-        <th>下單時間</th>
-        <th>購買商品</th>
-        <th>數量</th>
-        <th>應付金額</th>
-        <th>是否付款</th>
-        <th>詳細資訊</th>
+        <th>TIME</th>
+        <th>PRODUCTS</th>
+        <th>QTY</th>
+        <th>TOTAL</th>
+        <th>PAYMENT</th>
+        <th>INFO</th>
       </tr>
     </thead>
 
@@ -57,11 +57,11 @@
 
           <td>NT$ {{ filterStore.currency(item.total) }}</td>
           <td>
-            <span v-if="item.is_paid">已付款</span>
-            <span v-else>未付款</span>
+            <span v-if="item.is_paid">PAID</span>
+            <span v-else>NO</span>
           </td>
 
-          <td><button class="btn btn-primary" @click="view(item)">檢視</button></td>
+          <td><button class="btn btn-primary" @click="view(item)">VIEW</button></td>
         </tr>
       </template>
     </tbody>

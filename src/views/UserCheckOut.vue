@@ -28,24 +28,24 @@
       <form class="col-lg-8 col-sm-12 col-xs-12" @submit.prevent="pay">
         <table class="table align-middle">
           <thead>
-          <th width="120">圖片</th>  
-          <th width="120">品名</th>
-          <th width="120">數量</th>
-          <th width="120">單價</th>
+          <th width="120">PIC</th>  
+          <th width="120">NAME</th>
+          <th width="120">QTY</th>
+          <th width="120">$</th>
           </thead>
           <tbody>
           <tr v-for="item in order.products" :key="item.id">
             <td><img :src="item.product.imageUrl" alt="" width="120"></td>
             <td>{{ item.product.title }}</td>
             <td>{{ item.qty }}</td>
-            <td >{{ filterStore.currency(item.final_total) }}</td>
+            <td >{{ filterStore.currency(item.total - item.final_total) }}</td>
           </tr>
           </tbody>
           <tfoot>
-          <tr>
-            <th colspan="3" class="text-end">總計</th>
+          <!-- <tr>
+            <th colspan="3" class="text-end">Total</th>
             <td class="text-start">{{ total}}</td>
-          </tr>
+          </tr> -->
           </tfoot>
         </table>
 
@@ -56,28 +56,28 @@
             <td>{{ order.user.email }}</td>
           </tr>
           <tr>
-            <th>姓名</th>
+            <th>Name</th>
             <td>{{ order.user.name }}</td>
           </tr>
           <tr>
-            <th>收件人電話</th>
+            <th>Phone</th>
             <td>{{ order.user.tel }}</td>
           </tr>
           <tr>
-            <th>收件人地址</th>
+            <th>Address</th>
             <td>{{ order.user.address }}</td>
           </tr>
           <tr>
-            <th>付款狀態</th>
+            <th>Payment</th>
             <td>
-              <span v-if="!order.is_paid">尚未付款</span>
-              <span v-else class="text-success">付款完成</span>
+              <span v-if="!order.is_paid">NO</span>
+              <span v-else class="text-success">YES</span>
             </td>
           </tr>
           </tbody>
         </table>
         <div class="text-end" v-if="order.is_paid === false">
-          <button class="button">確認付款去</button>
+          <button class="button">PAY NOW</button>
         </div>
       </form>
     </div>

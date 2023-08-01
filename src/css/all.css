@@ -861,7 +861,6 @@ img {
 @media (max-width: 576px) {
   .i-wrapper {
     /* padding: 0 !important; */
-    width: 10% !important;
   }
 }
 /**單價容器 */
@@ -895,16 +894,8 @@ img {
   /* outline: auto; */
 }
 
-@media (max-width: 576px) {
-  .title-wrapper {
-    width: 10% !important;
-  }
-}
 /**Input數量容器 */
 @media (max-width: 576px) {
-  #qty-wrapper {
-    width: 20% !important;
-  }
   /* .input-group-sm >.form-control {
     padding: 0rem;
   } */
@@ -2310,7 +2301,6 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 10px;
   border-top: 1px solid #ddd;
 }
 
@@ -2324,7 +2314,6 @@ svg {
 
 .text-body {
   font-size: 0.9em;
-  padding-bottom: 10px;
   text-align: center;
 }
 

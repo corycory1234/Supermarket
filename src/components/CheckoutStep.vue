@@ -15,19 +15,19 @@
 import { ref } from "vue";
 const buttonArr = ref([
   {
-    title: "確認商品",
+    title: "Confirmation",
     icon: "bi bi-1-circle-fill",
     path: "/cart1",
     step: 0
   },
   {
-    title: "收貨資訊",
+    title: "Receiver Info",
     icon: "bi bi-2-circle-fill",
     path: "/cart2",
     step: 1
   },
   {
-    title: "確認付款",
+    title: "Payment",
     icon: "bi bi-3-circle-fill",
     path: "/cart3",
     step: 2,
@@ -91,9 +91,21 @@ defineExpose({nextStep, preStep});
   padding-right: 5px;
 }
 
+@media (max-width: 768px) {
+  .step-style {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .step-style {
+    font-size: .8rem;
+  }
+}
+
 @media (max-width: 414px) {
   .step-style {
-    font-size: .9rem;
+    font-size: .7rem;
   }
 }
 </style>
