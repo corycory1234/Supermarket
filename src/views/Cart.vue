@@ -14,9 +14,8 @@
       </nav>
     </div>
   </div>
-  <!-- HEADER END -->
 
-
+  <!---- 購物STEP ---->
   <div class="step-container">
     <CheckoutStep ref="refStep"></CheckoutStep>
   </div>
@@ -25,16 +24,15 @@
   <div class="wrapper container" v-if="!isNext">
     <div class="row">
       <div class=" col-xl-7  col-md-12  mt-5" >
-        <div class="sticky-top">
           <table class="table align-middle">
 
             <!---- 表頭 ---->
             <thead>
               <tr>
-                <th style="width: 150px">圖片</th>
-                <th class="title-wrapper">品名</th>
-                <th style="width: 110px" class="text-center" id="qty-wrapper">數量</th>
-                <th class="text-center price-wrapper">單價</th>
+                <th style="width: 150px">PIC</th>
+                <th class="title-wrapper">Name</th>
+                <th style="width: 110px" class="text-center" id="qty-wrapper">QTY</th>
+                <th class="text-center price-wrapper">$</th>
                 <th style="width: 50px" class="i-wrapper"></th>
               </tr>
             </thead>
@@ -43,10 +41,11 @@
             <!---- 表格【內容】 ---->
             <template v-if="cart.carts">
               <tr v-for="item in cart.carts" :key="item.id">
-                <td class="img-wrapper">
-                  <div style="height: 100px; background-size: cover; background-position: center"
+                <td class="img-wrapper" >
+                  <!-- <div style="height: 100px; background-size: cover; background-position: center"
                    :style="{backgroundImage: `url(${item.product.imageUrl})`}">
-                  </div>
+                  </div> -->
+                  <img :src="item.product.imageUrl" class="img-fluid" alt="" style="width: 100%">
                 </td>
 
                 <td >
@@ -104,7 +103,7 @@
               <button class="btn btn-success" @click="next">下一步</button>
             </div>
           </div> -->
-        </div>
+
 
 
 

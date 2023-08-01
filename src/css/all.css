@@ -897,14 +897,10 @@ img {
 
 @media (max-width: 576px) {
   .title-wrapper {
-    width: 20% !important;
+    width: 10% !important;
   }
 }
 /**Input數量容器 */
-#qty-wrapper {
-  outline: auto;
-}
-
 @media (max-width: 576px) {
   #qty-wrapper {
     width: 20% !important;
@@ -2062,7 +2058,7 @@ a {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    background-color: rgba(255, 211, 6, 0);
+    background-color: rgba(255, 210, 8, 0);
     position: absolute;
   }
   .navBar li {

@@ -16,7 +16,7 @@ a{
   z-index: 100;
 }
 // NAV導覽列
-.navBar{
+.navBar {
   width: 100%;
   margin: 0px auto;
   // padding: 10px 0;
@@ -34,7 +34,7 @@ a{
   // display: none;
   
   // 各個Router上方橫線
-  li:before{
+  li:before {
     content: "";
     display: block;
     width: 0%;
@@ -131,28 +131,6 @@ a{
   color: green;
 }
 
-// 隱藏Nav & 顯示漢堡
-// @media (max-width: 992px) {
-//   .navBar {
-//     // max-height: 0;
-//     // overflow: hidden;
-//     // flex-direction: column;
-//   }
-  
-//   .showBurger {
-//     // display: block;
-//     // position: absolute;
-//     // top: 0;
-//     // right: 0;
-//     // z-index: 200;
-
-//     .bi-list{
-//       // font-size: 3rem;
-//       // color:  rgba(255,211,6,);;
-//     }
-//   }
-// }
-
 
 
 @media (max-width: 992px){
@@ -170,7 +148,7 @@ a{
     flex-direction: column;
     width: 100%;
     align-items: flex-end;
-    background-color: rgba(255,211,6, 0);
+    background-color: rgba(255, 210, 8, 0);
     position:absolute; // 取消Sticky
     // outline: auto;
 
