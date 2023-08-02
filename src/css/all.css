@@ -74,6 +74,9 @@
   color: #fff;
   opacity: 0.75;
 }
+.footer-dark .item.social > a .bi {
+  padding: 0;
+}
 
 .footer-dark .item.social > a:hover {
   opacity: 0.9;

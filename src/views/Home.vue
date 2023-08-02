@@ -15,7 +15,7 @@
 
         </div> -->
         <div>
-          <h2 class="header-txt">Buy Fresh<br>at Supermarket</h2>
+          <h2 class="header-txt">Buy Fresh<br>at ZOZO</h2>
             <router-link to="/user/allProducts" class="item">
               <button class="header-btn">SHOP</button>
             </router-link>
