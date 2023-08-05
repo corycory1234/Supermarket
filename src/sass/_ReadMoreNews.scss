@@ -171,18 +171,24 @@
 };
 // 576斷點
 @media (max-width:576px) {
-  .ad-bottom {
-    display: flex;
+  .read-more-container {
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    .read-more-card {
+      width: 95%;
+    };
+    .ad-bottom {
+      width: 95%;
+    };
   }
 }
 // 414斷點
 @media (max-width: 414px) {
   .read-more-container {
     flex-direction: column;
+    align-items: center;
     .read-more-card {
-      width: 98%;
+      width: 90%;
    };
 
     .ad-bottom {

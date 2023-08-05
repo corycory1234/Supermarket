@@ -168,6 +168,7 @@ const displayNews = (newsId) => {
       console.log(response);
       const article = response.data.article; // response出來為OBJ物件, 先用article變數去接
         newsContent.value[id] = article;
+        console.log(newsContent.value);
       newsContent.value.push(article);
       console.log(newsContent.value); // 問：不太懂空Arr, 裡面卻有4筆元素資料?? (用forEach時)
     })

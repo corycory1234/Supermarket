@@ -27,13 +27,13 @@
                     Typhoon comes Today </a>
                   <p class="m-0">Stuff On Shelves are all empty after the typhoon came from West Coast. We will supply goods ASAP.</p>
                 </div>
-                <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
-                  <div class="d-flex align-items-center">
+                <div class="d-flex justify-content-between align-items-center bg-white border border-top-0 p-4">
+                  <div>
                     <img class="rounded-circle mr-2" src="../assets/images/NEWS/pp100x100.jpg" width="40"  alt="">
-                    <small>Boss</small>
+                    <small class="px-1">Boss</small>
                   </div>
-                  <div class="d-flex align-items-center">
-                    <small class="ml-3"><i class="bi bi-eye-fill mr-2"></i>12345</small>
+                  <div>
+                    <button class="btnbtn" @click="readMore('-N_CCoLjYfinZI5ZJ5tJ')">READ MORE</button>
                   </div>
                 </div>
               </div>
@@ -51,13 +51,13 @@
                   </a>
                   <p class="m-0">Please tie your pets outside. It's prohibited  let them step inside. Get Fine with $1,000 if violate the rule</p>
                 </div>
-                <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
-                  <div class="d-flex align-items-center boss">
+                <div class="d-flex justify-content-between align-items-center bg-white border border-top-0 p-4">
+                  <div>
                     <img class="rounded-circle mr-2" src="../assets/images/NEWS/pp100x100.jpg" width="40" alt="">
-                    <small>Boss</small>
+                    <small class="px-1">Boss</small>
                   </div>
-                  <div class="d-flex align-items-center">
-                    <small class="ml-3"><i class="bi bi-eye-fill mr-2"></i>12345</small>
+                  <div>
+                    <button class="btnbtn" @click="readMore('-N_CDG4_Z-XfxjBDoOUl')">READ MORE</button>
                   </div>
                 </div>
               </div>
@@ -74,27 +74,27 @@
               <h4 class="m-0 text-uppercase font-weight-bold">Follow Us</h4>
             </div>
             <div class="bg-white border border-top-0 p-3">
-              <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #39569E;">
+              <a href="https://www.facebook.com" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #39569E;">
                 <i class="bi bi-facebook m-2"></i>
                 <span class="font-weight-medium">12,345 Fans</span>
               </a>
-              <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #52AAF4;">
+              <a href="https://www.twitter.com" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #52AAF4;">
                 <i class="bi bi-twitter m-2"></i>
                 <span class="font-weight-medium">12,345 Followers</span>
               </a>
-              <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #0185AE;">
+              <a href="https://line.me/zh-hant/" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #0185AE;">
                 <i class="bi bi-line m-2"></i>
                 <span class="font-weight-medium">12,345 Connects</span>
               </a>
-              <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #C8359D;">
+              <a href="https://www.instagram.com" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #C8359D;">
                 <i class="bi bi-instagram m-2"></i>
                 <span class="font-weight-medium">12,345 Followers</span>
               </a>
-              <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #DC472E;">
+              <a href="https://www.google.com" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #DC472E;">
                 <i class="bi bi-google m-2"></i>
                 <span class="font-weight-medium">12,345 Subscribers</span>
               </a>
-              <a href="" class="d-block w-100 text-white text-decoration-none" style="background: #055570;">
+              <a href="https://www.linkedin.com" class="d-block w-100 text-white text-decoration-none" style="background: #055570;">
                 <i class="bi bi-linkedin m-2"></i>
                 <span class="font-weight-medium">12,345 Followers</span>
               </a>
@@ -124,7 +124,12 @@
 </template>
 
 <script setup>
-
+import {ref} from "vue";
+// ReadMore 讀取單一新聞
+import router from "../router/index.js";
+const readMore = (id) => {
+  router.push(`/user/userNews/${id}`)
+};
 </script>
 
 <style lang="scss" scoped>

@@ -57,7 +57,7 @@
 
 <script setup>
 import axios from "axios";
-import { ref, onMounted } from "Vue";
+import { ref, onMounted } from "vue";
 // Vue Router 4.x, 使用route方法 (透過ID, 點擊取得單一新聞)
 import { useRoute } from "vue-router";
 const route = useRoute();

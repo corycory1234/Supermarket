@@ -45,15 +45,11 @@ const routes = [
         component: () => import ("../views/UserProducts.vue")
       },
       {
-        path: "cart",
-        component: () => import ("../views/UserCart.vue"),
-      },
-      {
         path: "product/:productId", // 單一商品(看更多)
         component: () => import ("../views/SeeMore.vue")
       },
       {
-        name: "order", // 
+        name: "order", // 我的訂單
         path: "checkout/:orderId",
         component: () => import ("../views/UserCheckOut.vue")
       },
@@ -78,7 +74,7 @@ const routes = [
         component: () => import ("../views/About.vue")
       },
       {
-        path: "favorite",
+        path: "favorite", // 我的收藏
         component: () => import ("../views/Favorite.vue")
       }
     ]

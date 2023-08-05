@@ -6,49 +6,22 @@
 <div class="container-fluid">
   <div class="row bg-area">
     <div class="col-lg-12 p-0 bg-box">
-      <!-- <div class="img-container">
-        <img class="img-fluid" src="../assets/images/header.jpg">
-      </div> -->
-
-
-        <!-- <div class="bg-box ">
-
-        </div> -->
         <div>
           <h2 class="header-txt">Buy Fresh<br>at ZOZO</h2>
             <router-link to="/user/allProducts" class="item">
               <button class="header-btn">SHOP</button>
             </router-link>
         </div>
-
-
     </div>
   </div>
 </div>
 
 <!---- PopUp廣告 ---->
-<div id="popup" class="popup-container" v-if="isPopUp" @mousewheel.prevent>
-
-</div>
-
+<div id="popup" class="popup-container" v-if="isPopUp" @mousewheel.prevent></div>
 <div class="popup-img" v-if="isPopUp">
     <button type="button" class="close-ad" @click="closeAd">X</button>
     <img class="rounded" src="../assets/images/Home-AD/Popup1.png" alt="">
 </div>
-
-<!---- 舊HEADER ---->
-<!-- <div class="bg-area">
-  <div class="bg-box">
-    <img src="../assets/images/header.jpg">
-  </div>
-  <div>
-    <h2 class="header-txt">Buy Fresh<br>at Supermarket</h2>
-      <router-link to="/user/allProducts" class="item">
-        <button class="header-btn">SHOP</button>
-      </router-link>
-  </div>
-</div> -->
-
 
 <!---- 活動輪播圖 ---->
 <div class="container swiper-container">
@@ -63,21 +36,16 @@
       <img :src="getSwiperPics(item.imgUrl)" alt="">
     </SwiperSlide>
   </Swiper>
-  <!-- <div class="index-banner">
-    <div class="index-banner-img-wrapper"><img src="../assets/images/Home-AD/home-AD3.jpg" alt=""></div>
-    <div class="index-banner-img-wrapper"><img src="../assets/images/Home-AD/home-AD4.jpg" alt=""></div>
-    <div class="index-banner-img-wrapper"><img src="../assets/images/Home-AD/home-AD5.jpg" alt=""></div>    
-  </div> -->
 </div>
 
-<!---- 新聞 ---->
-<HomeNews></HomeNews>
+  <!---- 新聞 ---->
+  <HomeNews></HomeNews>
 
-<!---- 關於我們 ---->
-<HomeUs></HomeUs>
+  <!---- 關於我們 ---->
+  <HomeUs></HomeUs>
 
-<!---- 頁尾 ---->
-<Footer></Footer>
+  <!---- 頁尾 ---->
+  <Footer></Footer>
 
 </template>
 
