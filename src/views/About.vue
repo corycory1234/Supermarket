@@ -28,9 +28,8 @@
               <img class="img-fluid rounded" src="../assets/images/ABOUT/about-Banner3.jpg" alt="">
             </div>
             <div class="col-sm-8">
-              <h2 class="text-black mb-3">We Sell Best Dairy Products</h2>
-              <p class="text-black mb-4">Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore
-                erat amet</p>
+              <h2 class="text-black mb-3">We Sell Fresh Fish Daily</h2>
+              <p class="text-black mb-4">They are from West Coast and we freeze the prey on the way of delivery!</p>
               <a class="btn btn-secondary rounded-pill py-2 px-4" href="">Read More</a>
             </div>
           </div>
@@ -41,9 +40,8 @@
               <img class="img-fluid rounded" src="../assets/images/ABOUT/about-Banner4.jpg" alt="">
             </div>
             <div class="col-sm-8">
-              <h2 class="text-black mb-3">We Deliver Fresh Mild Worldwide</h2>
-              <p class="text-black mb-4">Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore
-                erat amet</p>
+              <h2 class="text-black mb-3">Tender Meats meet your need</h2>
+              <p class="text-black mb-4">Get Any cuts of pork, beef and chicken Here!</p>
               <a class="btn btn-secondary rounded-pill py-2 px-4" href="">Read More</a>
             </div>
           </div>
@@ -68,13 +66,13 @@
             <h5 class="team-txt">Adam Crew</h5>
             <p class="text-primary team-txt">Founder</p>
             <div class="d-flex justify-content-center">
-              <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href="">
+              <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href="https://www.facebook.com">
                 <i class="bi bi-facebook"></i>
               </a>
-              <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href="">
+              <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href="https://www.instagram.com">
                 <i class="bi bi-instagram"></i>
               </a>
-              <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href="">
+              <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href="https://www.twitter.com">
                 <i class="bi bi-twitter"></i>
               </a>
             </div>
@@ -86,13 +84,13 @@
             <h5 class="team-txt">Doris Jordan</h5>
             <p class="text-primary team-txt">Veterinarian</p>
             <div class="d-flex justify-content-center">
-              <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href="">
+              <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href="https://www.facebook.com">
                 <i class="bi bi-facebook"></i>
               </a>
-              <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href="">
+              <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href="https://www.instagram.com">
                 <i class="bi bi-instagram"></i>
               </a>
-              <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href="">
+              <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href="https://www.twitter.com">
                 <i class="bi bi-twitter"></i>
               </a>
             </div>
@@ -104,13 +102,13 @@
             <h5 class="team-txt">Jack Dawson</h5>
             <p class="text-primary team-txt">Farmer</p>
             <div class="d-flex justify-content-center">
-              <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href="">
+              <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href="https://www.facebook.com">
                 <i class="bi bi-facebook"></i>
               </a>
-              <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href="">
+              <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href="https://www.instagram.com">
                 <i class="bi bi-instagram"></i>
               </a>
-              <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href="">
+              <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href="https://www.twitter.com">
                 <i class="bi bi-twitter"></i>
               </a>
             </div>

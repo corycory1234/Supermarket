@@ -57,3 +57,14 @@
   width: calc(100% + 60px);
   left: 0;
 }
+
+@media(max-width: 480px) {
+  .about-us {
+    h1 {
+      font-size: 2rem;
+    }
+    .fw-bold {
+      font-size: .9rem !important;
+    }
+  }
+}

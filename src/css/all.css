@@ -457,6 +457,14 @@ img {
   left: 0;
 }
 
+@media (max-width: 480px) {
+  .about-us h1 {
+    font-size: 2rem;
+  }
+  .about-us .fw-bold {
+    font-size: 0.9rem !important;
+  }
+}
 /*** HEADER ***/
 .page-header {
   background: url(../assets/images/ABOUT/About-Header2.jpg) center center no-repeat;

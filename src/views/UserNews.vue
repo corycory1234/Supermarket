@@ -89,27 +89,27 @@
           <h4>FOLLOW US</h4>
         </div>
         <div class="border border-top-0 p-3">
-          <a href="" class="ad-link" style="background: #39569E;">
+          <a href="https://www.facebook.com" class="ad-link" style="background: #39569E;">
             <i class="bi bi-facebook m-2"></i>
             <span>999 Fans</span>
           </a>
-          <a href="" class="ad-link" style="background: #52AAF4;">
+          <a href="https://www.twitter.com" class="ad-link" style="background: #52AAF4;">
             <i class="bi bi-twitter m-2"></i>
             <span>999 Followers</span>
           </a>
-          <a href="" class="ad-link" style="background: #0185AE;">
+          <a href="https://line.me/zh-hant/" class="ad-link" style="background: #0185AE;">
             <i class="bi bi-line m-2"></i>
             <span>999 Connects</span>
           </a>
-          <a href="" class="ad-link" style="background: #C8359D;">
+          <a href="https://www.instagram.com" class="ad-link" style="background: #C8359D;">
             <i class="bi bi-instagram m-2"></i>
             <span>999 Followers</span>
           </a>
-          <a href="" class="ad-link" style="background: #DC472E;">
+          <a href="https://www.google.com" class="ad-link" style="background: #DC472E;">
             <i class="bi bi-google m-2"></i>
             <span>999 Subscribers</span>
           </a>
-          <a href="" class="ad-link" style="background: #055570;">
+          <a href="https://www.linkedin.com" class="ad-link" style="background: #055570;">
             <i class="bi bi-linkedin m-2"></i>
             <span>999 Followers</span>
           </a>

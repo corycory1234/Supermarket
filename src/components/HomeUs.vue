@@ -24,19 +24,18 @@
         </div>
         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
           <p class="section-title bg-white text-start text-primary pe-3">About Us</p>
-          <h1 class="mb-4">Know About Our Dairy Farm & Our History</h1>
-          <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita
-            erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+          <h1 class="mb-4">Know About Our Quality & Our History</h1>
+          <p class="mb-4">ZOZO provides customers with Fresh and Genuine products. This is our responsibility to fulfill your satisfaction</p>
           <div class="row g-5 pt-2 mb-5">
             <div class="col-sm-6">
               <img class="img-fluid mb-4" src="/src/assets/images/Home-US//icons8-farmer-64.png" alt="">
               <h5 class="mb-3">Dedicated Services</h5>
-              <span>Clita erat ipsum et lorem et sit, sed stet lorem sit clita</span>
+              <span>Any Produce has QR-Code to show the place where it origins from </span>
             </div>
             <div class="col-sm-6">
               <img class="img-fluid mb-4" src="/src/assets/images/Home-US/icons8-organic-64.png" alt="">
               <h5 class="mb-3">Organic Products</h5>
-              <span>Clita erat ipsum et lorem et sit, sed stet lorem sit clita</span>
+              <span>They are natural without any pesticides while planting</span>
             </div>
           </div>
           <router-link to="/user/about" class="item">
@@ -54,5 +53,5 @@ import router from '../router';
 </script>
 
 <style lang="scss" scoped>
-@import "/src/sass/_home-about.scss";
+@import "../sass/_home-about.scss";
 </style>
