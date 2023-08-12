@@ -1,0 +1,1 @@
+import{N as a}from"./index-ed73d2f1.js";const u=a("useFilterStore",()=>({currency:e=>`${parseInt(e,10).toFixed(0).replace(/./g,(t,r,o)=>r&&t!=="."&&(o.length-r)%3===0?`, ${t}`.replace(/\s/g,""):t)}`,date:e=>new Date(e*1e3).toLocaleDateString()}));export{u};
