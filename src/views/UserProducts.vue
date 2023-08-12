@@ -1,5 +1,6 @@
 <template>
-  <Loading :active="isLoading"></Loading>
+  <!-- <Loading :active="isLoading"></Loading> -->
+  
      <!--- HEADER START --->
      <div class="container-fluid page-header py-5 mb-2 wow fadeIn" data-wow-delay="0.1s">
     <div class="container text-center py-5">
@@ -171,6 +172,7 @@
   @emit-pages="getProducts">
 </Pagination> -->
 </div>
+
 <!-- <p v-if="refSearch">{{ refSearch.searchedArr }}</p> -->
 <!-- <Search 
 ref="refSearch"
@@ -184,11 +186,12 @@ ref="refSearch"
 
 <!-- <input type="text" v-model="searchTxt">
 <button type="button" @click="searchArr">搜尋</button>   -->
+<!-- <i class="bi bi-arrow-up-circle-fill" @click="scrollTop"></i> -->
 <Footer></Footer>
 </template>
 
 <script setup>
-import { ref, onMounted, computed, inject, watch } from "Vue";
+import { ref, onMounted, computed, inject, watch } from "vue";
 import axios from "axios";
 const result = ref([]);
 
@@ -405,6 +408,17 @@ const {searchedArr, searchTxt, filteredArr} = storeToRefs(searchStore);
 
 // 分頁
 import Pagination from "../components/Pagination.vue";
+
+//
+const scrollContainer = ref(null);
+const scrollTop = () => {
+  if(scrollContainer.value) {
+    scrollContainer.value.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  }
+}
 </script>
 
 <style lang="scss" scoped>

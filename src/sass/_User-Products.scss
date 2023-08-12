@@ -2,7 +2,7 @@
 .page-header {
   background: url(../assets/images/PRODUCTS/Product-Header2.jpg) center center no-repeat;
   background-size: cover;
-  margin-top: 66px;
+  margin-top: 67px;
   li:hover a{
     color:cadetblue;
   }
@@ -14,6 +14,11 @@
 .page-header .breadcrumb-item a {
     font-size: 18px;
     color: white;
+}
+@media (max-width:992px) {
+  .page-header {
+    margin-top: 69px;
+  };
 }
 
 // 商品卡品
@@ -107,8 +112,8 @@ svg {
   justify-content: center;
 }
 
+// 左邊商品種類選項<li>
 .list-group {
-
   li:hover {
     cursor: pointer;
     background-color: hsl(196, 100%, 53%);
@@ -127,8 +132,23 @@ svg {
   }
 }
 
-@media (max-width:992px) {
-  .page-header {
-    margin-top: 69px;
-  };
+
+
+// 滾動至TOP
+.scroll-container {
+  overflow-y: scroll;
+  width: 100%;
+  height: 100vh;
+}
+.scroll-container::-webkit-scrollbar {
+  display: none; // 隱藏Y滾動條
+}
+.bi-arrow-up-circle-fill {
+  font-size: 36px;
+  position: absolute;
+  bottom:0;
+  right:10px;
+  cursor: pointer;
+  padding: 0;
+  color: #ffcaa6;
 }

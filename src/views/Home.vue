@@ -33,7 +33,9 @@
     :loop="true"
     :grabCurosr="true">
     <SwiperSlide v-for="(item, index) in swiperPics" :key="index">
-      <img :src="getSwiperPics(item.imgUrl)" alt="">
+      <router-link to="/user/UserCoupons" class="item">
+        <img :src="getSwiperPics(item.imgUrl)" alt="" class="coupon-hover">
+      </router-link>
     </SwiperSlide>
   </Swiper>
 </div>
@@ -68,9 +70,9 @@ const getSwiperPics = (name) => {
   return new URL (`../assets/images/Home-AD/${name}`, import.meta.url).href
 }
 const swiperPics = [
-  {imgUrl:"home-AD3.jpg"},
-  {imgUrl:"home-AD4.jpg"},
-  {imgUrl:"home-AD5.jpg"},
+  {imgUrl:"home-AD6.png"},
+  {imgUrl:"home-AD7.png"},
+  {imgUrl:"home-AD8.png"},
 ]
 
 // 導覽列

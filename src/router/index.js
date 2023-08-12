@@ -76,6 +76,10 @@ const routes = [
       {
         path: "favorite", // 我的收藏
         component: () => import ("../views/Favorite.vue")
+      },
+      {
+        path: "userCoupons", // 優惠券
+        component: () => import("../views/UserCoupons.vue")
       }
     ]
   },

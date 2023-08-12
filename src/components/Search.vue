@@ -1,8 +1,10 @@
 <template>
-  <input type="text" v-model="searchTxt">
-  <button type="button" @click="searchArr">搜尋</button>  
+  <!-- 不使用Search.vue, 改用Pinia 搜尋商品 -->
+
+  <!-- <input type="text" v-model="searchTxt">
+  <button type="button" @click="searchArr">搜尋</button>   -->
   <!------ 搜尋後之商品 ------>
-  <div class="col-12 col-sm-12 col-md-9" v-if="searchedArr">
+  <!-- <div class="col-12 col-sm-12 col-md-9" v-if="searchedArr">
     <div class="row">
       <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-container" v-for="(product, index) in searchedArr" :key="index">
         <div class="card">
@@ -40,33 +42,33 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script setup>
-import { ref } from "vue";
-// 搜尋商品
-const props = defineProps({
-  tempProduct: {
-    type: Array
-  }
-});
-const searchTxt = ref();
-const searchedArr = ref([]);
-const searchArr = () => {
-  if (!searchTxt.value.replace(/^\s+|\s+$/gm, '')) { return } // 禁 空字串&空白鍵  
-  return props.tempProduct.filter((item) => {
-    if (item.title.match(searchTxt.value)) {
-      return searchedArr.value.push(item),
-        console.log(searchedArr.value);
-    }
-  })
-};
+// import { ref } from "vue";
+// // 搜尋商品
+// const props = defineProps({
+//   tempProduct: {
+//     type: Array
+//   }
+// });
+// const searchTxt = ref();
+// const searchedArr = ref([]);
+// const searchArr = () => {
+//   if (!searchTxt.value.replace(/^\s+|\s+$/gm, '')) { return } // 禁 空字串&空白鍵  
+//   return props.tempProduct.filter((item) => {
+//     if (item.title.match(searchTxt.value)) {
+//       return searchedArr.value.push(item),
+//         console.log(searchedArr.value);
+//     }
+//   })
+// };
 
-defineExpose({
-  searchArr, searchTxt, searchedArr, props
-});
-defineEmits(["searchedArr"]);
+// defineExpose({
+//   searchArr, searchTxt, searchedArr, props
+// });
+// defineEmits(["searchedArr"]);
 </script>
 
 <style lang="scss" scoped>

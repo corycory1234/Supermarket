@@ -30,6 +30,12 @@
       </li>
 
       <li>
+        <router-link to="/user/UserCoupons" class="item">
+          <li >Coupons</li>
+        </router-link>
+        </li>
+
+      <li>
       <router-link to="/user/userOrder" class="item">
         <li >My Order</li>
       </router-link>

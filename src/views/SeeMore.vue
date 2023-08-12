@@ -19,12 +19,6 @@
 <!--- HEADER END --->
 
   <div class="container">
-    <!-- <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><router-link to="/user/cart2">購物車</router-link></li>
-        <li class="breadcrumb-item active" aria-current="page">{{ product.title }}</li>
-      </ol>
-    </nav> -->
     
     <div class="row">
       <article class="col-12 card">
@@ -35,8 +29,6 @@
         </div>
 
           <div class="priceAndCart col-lg-2 col-sm-4 col-xs-4">
-            <!-- <div class="h5" v-if="!product.price">{{ product.origin_price }} 元</div> -->
-            <!-- <del class="h6" v-if="product.price">原價 {{ product.origin_price }} 元</del> -->
             <div class="h5 text-start" v-if="product.price">$ {{ product.price }} </div>
             <hr>
              <!---- SVG按鈕 ---->
@@ -58,11 +50,11 @@
             </button>
 
             <!-- 見BootStrap-Spinner; 當status.loadingItem的id 等於 product.id, 讀取按鈕就跑出, 反之,則消失  -->
-            <button class="btn btn-success" type="button" 
+            <!-- <button class="btn btn-success" type="button" 
             disabled v-if="status.loadingItem === product.id">
               <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
               商品加入購物車中...
-            </button>
+            </button> -->
           </div>
         </div> 
       

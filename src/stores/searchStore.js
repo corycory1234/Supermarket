@@ -27,7 +27,7 @@ export default defineStore ("useSearchStore", () => {
     searchedArr.value = []; // 要歸零, 不然搜尋完, 在點篩選種類, 會FAIL
     filteredArr.value = []; // 要歸零, 不然搜尋完, 在點篩選種類, 會FAIL 
     return allProducts.value.filter((item) => {
-      if (item.title.match(searchTxt.value)) {
+      if (item.title.toLowerCase().match(searchTxt.value.toLowerCase())) {
         return searchedArr.value.push(item),
           console.log(searchedArr.value);
       }

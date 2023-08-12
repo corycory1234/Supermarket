@@ -22,50 +22,34 @@
   <!---- Sorry海報 ---->
   <div v-if="myFavorite.length === 0" class="sorryPoster">
     <img src="../assets/images/Favorite/Sorry.jpg" alt="">
-    <button type="button" class="favorite-btn">
-      <router-link to="/user/AllProducts" class="item"></router-link>
-      SHOP
-    </button>
+    <router-link to="/user/Allproducts" class="item">
+      <button type="button" class="favorite-btn">SHOP</button>
+    </router-link>
   </div>
   <!---- Sorry海報 ---->
 
   <!--- 我的最愛卡片 --->
-  <ul class="favorite-container">
-    <li v-for="(item, index) in myFavorite" :key="index" class="card">
-      
-      <!-- <div class="card "> -->
+  <div class="container-fluid">
+    
+    <ul class="row favorite-container">
+      <li v-for="(item, index) in myFavorite" :key="index" class="card me-auto">
         <div class="card-img">
           <img :src="item.product.imageUrl" alt="">
         </div>
         <div class="card-title">{{item.product.title}}</div>
         <div class="card-subtitle">{{item.product.description}}</div>
         <hr class="card-divider">
+        
         <div class="card-footer">
           <div class="card-price"><span>$</span>{{item.product.price}}</div>
             <i class="bi bi-info-circle card-btn" @click="seeMore(item.product.id)"></i>
             <i class="bi bi-cart card-btn" @click="addCart(item.product.id, 1)"></i>
-          <!-- <button class="card-btn" @click="addCart(item.product.id, 1)">
-
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path
-                d="m397.78 316h-205.13a15 15 0 0 1 -14.65-11.67l-34.54-150.48a15 15 0 0 1 14.62-18.36h274.27a15 15 0 0 1 14.65 18.36l-34.6 150.48a15 15 0 0 1 -14.62 11.67zm-193.19-30h181.25l27.67-120.48h-236.6z">
-              </path>
-              <path
-                d="m222 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z">
-              </path>
-              <path
-                d="m368.42 450a57.48 57.48 0 1 1 57.48-57.48 57.54 57.54 0 0 1 -57.48 57.48zm0-84.95a27.48 27.48 0 1 0 27.48 27.47 27.5 27.5 0 0 0 -27.48-27.47z">
-              </path>
-              <path
-                d="m158.08 165.49a15 15 0 0 1 -14.23-10.26l-25.71-77.23h-47.44a15 15 0 1 1 0-30h58.3a15 15 0 0 1 14.23 10.26l29.13 87.49a15 15 0 0 1 -14.23 19.74z">
-              </path>
-            </svg>
-          </button> -->
         </div>
-      <!-- </div> -->
-
-    </li>
-  </ul>
+  
+  
+      </li>
+    </ul>
+  </div>
   
 
   <Footer></Footer>
@@ -88,16 +72,19 @@ const cartStore = useCartStore();
 const {idArr, cart} = storeToRefs(cartStore);
 const {getCart} = cartStore;
 
-// 沒onMounted, 右上數字不會變動
+// 並沒有, 可以拿掉, 2023/8/12
+// 沒onMounted, 右上數字不會變動 
 onMounted(() =>{
   getCart();
 });
-watch ( // 監聽, 取得加入購物車後的右上ICON數字
-  () => idArr.value,
-  (newVal) => {
-    getCart();
-  }
-)
+
+// 先不要用watch, 不然會getCart()會不斷對API送出請求 2023/8/12
+// watch ( // 監聽, 取得加入購物車後的右上ICON數字; 
+//   () => idArr.value,
+//   (newVal) => {
+//     getCart();
+//   }
+// )
 
 // 查看更多
 import router from "../router/index.js"

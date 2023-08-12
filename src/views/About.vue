@@ -18,7 +18,7 @@
 
   <HomeUs></HomeUs>
 
-  <!-- Banner Start -->
+  <!-- BANNER -->
   <div class="container-fluid banner my-5 py-5" data-parallax="scroll" data-image-src="img/banner.jpg">
     <div class="container py-5">
       <div class="row g-5">
@@ -30,7 +30,10 @@
             <div class="col-sm-8">
               <h2 class="text-black mb-3">We Sell Fresh Fish Daily</h2>
               <p class="text-black mb-4">They are from West Coast and we freeze the prey on the way of delivery!</p>
-              <a class="btn btn-secondary rounded-pill py-2 px-4" href="">Read More</a>
+              <router-link to="/user/userNews/-NbbXEqcwoc1xELS9wsY">
+                <a class="btn btn-secondary rounded-pill py-2 px-4" href="">Read More</a>
+              </router-link>
+
             </div>
           </div>
         </div>
@@ -42,14 +45,16 @@
             <div class="col-sm-8">
               <h2 class="text-black mb-3">Tender Meats meet your need</h2>
               <p class="text-black mb-4">Get Any cuts of pork, beef and chicken Here!</p>
-              <a class="btn btn-secondary rounded-pill py-2 px-4" href="">Read More</a>
+              <router-link to="/user/userNews/-NbbZc6g9LzfeXxvATzP">
+                <a class="btn btn-secondary rounded-pill py-2 px-4" href="">Read More</a>
+              </router-link>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- Banner End -->
+  <!-- BANNER -->
 
 
   <!-- Team Start -->
