@@ -88,11 +88,12 @@ const btnTxt = ref(["COPY", "COPY", "COPY"]);
 // 剪貼簿
 const copy = (code, index) => {
   navigator.clipboard.writeText(code).then(() => {
-    console.log(`已複製${code}`);
   });
   btnTxt.value[index] = "COPIED!"
 };
 
 </script>
 
-<style lang="scss" scoped>@import "../sass/User-Coupons.scss";</style>
+<style lang="scss" scoped
+>@import "../sass/_User-Coupons.scss";
+</style>

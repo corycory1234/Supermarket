@@ -6,7 +6,7 @@
 
       <li>
         <router-link :to="{ name: 'home' }" class="item ">
-          <li class="company-icon"><img src="../assets/images/ICON/icon-3.png" alt="" style="margin-bottom: 10px;"></li>
+          <li class="company-icon"><img class="" src="../assets/images/ICON/icon-3.png" alt="" style="margin-bottom: 10px;"></li>
         </router-link>
       </li>
       
@@ -86,72 +86,6 @@
     </button>
 
   </nav>
-
-
-
-
-  
-  <!-- <nav class="nav-container navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <router-link :to="{ name: 'home' }" class="item navbar-brand">
-        <li>HOME</li>
-    </router-link>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ">
-
-          <router-link :to="{ name: 'home' }" class="item navbar-brand">
-            <li>HOME</li>
-          </router-link>
-
-          <router-link to="/user/about" class="item">
-            <li>About</li>
-          </router-link>
-
-          <router-link to="/user/Allproducts" class="item">
-            <li>Products</li>
-          </router-link>
-
-          <router-link to="/user/userNews" class="item">
-            <li>News</li>
-          </router-link>
-
-          <router-link to="/user/userOrder" class="item">
-            <li>My Order</li>
-          </router-link>
-
-          <li class="search-li">
-            <input type="text" v-model="searchTxt" 
-            @keydown.enter="searchArr" placeholder=" SEARCH"
-            class="input">
-            <router-link to="/user/Allproducts" class="item">
-              <button><i class="bi bi-search" @click="searchArr"></i></button>
-            </router-link>
-          </li>
-
-          <router-link :to="{ name: 'login' }" class="item">
-            <li><i class="bi bi-person-fill-gear"></i></li>
-          </router-link>
-
-          <router-link to="/user/favorite" class="item">
-            <li><i class="bi bi-heart-fill card-button"></i></li>
-          </router-link>
-          <span class="qty-favorite">{{ myFavorite.length }}</span>
-
-          <router-link to="/user/cart2" class="item ">
-            <li><i class="bi bi-cart"></i></li>
-          </router-link>
-          <span class="qty-cart">{{ idArr.length }}</span>
-
-
-      </ul>
-    </div>
-  </div>
-</nav> -->
 </template>
 
 <script setup>

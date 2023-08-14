@@ -2047,7 +2047,7 @@ a {
 }
 
 .navbar-toggler-icon {
-  color: green;
+  background-image: url("../assets/images/ICON/burger.png");
 }
 
 @media (max-width: 992px) {
@@ -2143,7 +2143,7 @@ a {
 }
 @media (max-width: 375px) {
   .navBar li {
-    height: 28px;
+    height: 25px;
   }
   .navBar li li {
     font-size: 10px;
@@ -2196,7 +2196,6 @@ a {
 }
 
 .table-type {
-  max-width: 1200px;
   margin: auto;
   border-collapse: collapse;
   font-size: 0.9em;
@@ -2225,6 +2224,16 @@ a {
 @media (max-width: 992px) {
   table {
     width: 98%;
+  }
+}
+@media (max-width: 582px) {
+  .order-table thead > tr > th:nth-last-child(1),
+  .order-table tbody > tr > td:nth-last-child(1) {
+    display: none;
+  }
+  .order-table thead > tr > th:nth-last-child(2),
+  .order-table tbody > tr > td:nth-last-child(2) {
+    display: none;
   }
 }
 .page-header {

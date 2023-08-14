@@ -22,7 +22,7 @@
 
 // TABLE表格
 .table-type {
-  max-width: 1200px;
+  // max-width: 1200px;
   margin: auto;
   border-collapse: collapse;
   font-size: 0.9em;
@@ -63,12 +63,18 @@
   }
 }
 
-// 隱藏「檢視」576px縮排
-// @media (max-width: 576px) {
-//   thead > tr> th:nth-last-child(1)
-//   ,tbody > tr> td:nth-last-child(1) {
-//     display: none;
-//   }
-// }
-
-
+// 隱藏「檢視」「PAYMENT」582px
+@media (max-width: 582px) {
+  .order-table {
+    // 「檢視」
+    thead > tr> th:nth-last-child(1)
+    ,tbody > tr> td:nth-last-child(1) {
+      display: none;
+    }
+    // 「PAYMENT」
+     thead > tr> th:nth-last-child(2)
+    ,tbody > tr> td:nth-last-child(2) {
+      display: none;
+    }
+  }
+}

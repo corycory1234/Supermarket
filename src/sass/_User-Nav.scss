@@ -128,7 +128,7 @@ a{
 
 
 .navbar-toggler-icon {
-  color: green;
+  background-image: url("../assets/images/ICON/burger.png");
 }
 
 
@@ -238,7 +238,7 @@ a{
 @media (max-width: 375px) {
   .navBar {
     li {
-      height: 28px;
+      height: 25px;
     }
     li li{
       font-size: 10px;
